@@ -68,6 +68,9 @@
     position: absolute;
     width:200px;
     height:60px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 
 .bottom_ring{
