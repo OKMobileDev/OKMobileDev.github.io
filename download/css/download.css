@@ -56,6 +56,20 @@
     height:60px;
 }
 
+.install_title{
+    position: absolute;
+    align-items:center;
+    margin-top: -8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.button{
+    position: absolute;
+    width:200px;
+    height:60px;
+}
+
 .bottom_ring{
     position: absolute;
     right: 0px;

