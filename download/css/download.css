@@ -1,3 +1,8 @@
+*{
+    margin:0px; 
+    padding:0px;
+}
+
 .header{
     display:flex;
     align-items:center;
@@ -33,6 +38,7 @@
 }
 
 .center{
+    margin-top: 30px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -77,8 +83,3 @@
     width: 52px;
     height: 62px;
 }
-
-*{
-    margin:0px; 
-    padding:0px;
-  }
