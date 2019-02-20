@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="CoinAll(内测)">
+    <title>CoinAll(内测)</title>
+    <meta id="description" name="description" content="">
+    <meta property="og:title" content="CoinAll(内测)">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="375">
+    <link rel="stylesheet" type="text/css" href="../coinall/css/install.css">
+</head>
+
+<body>
+    <div class="container">
+        <img class="bg" src="../coinall/images/coinall_bg.jpg"></img>
+        <div class="buttonBg">
+            <text class="install_title">安装/Install</text>
+        </div>
+        <a id="install" class="button"></a>
+    </div>
+</body>
+
+<script type="text/javascript">
+    document.getElementById('install').onclick = function () {
+        - 1 < navigator.userAgent.indexOf("iPhone") || -1 < navigator.userAgent.indexOf("iOS") ? window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-coinall-manifest.plist" : window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/CoinAll-android.apk"
+    }
+</script>
+
+
+</html>
