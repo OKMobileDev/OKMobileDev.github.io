@@ -10,7 +10,6 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="MobileOptimized" content="375">
-    <script src="../okex/install.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/download.css">
 </head>
 
@@ -30,11 +29,6 @@
     <img class="bottom_ring" src="../images/bottom_ring.png"><img>
 </body>
 
-<script type="text/javascript">
-    document.getElementById('install').onclick = function () {
-        -1 < navigator.userAgent.indexOf("iPhone") || -1 < navigator.userAgent.indexOf("iOS") ? window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist" : window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk"
-    }
-</script>
-
+<script type="text/javascript" src="../okex/install.js"></script>
 
 </html>
