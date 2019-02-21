@@ -28,6 +28,15 @@
     color: #fff;
 }
 
+.subName{
+    position: absolute;
+    top: 130px;
+    font-size: 10px;
+    text-align: center;
+    font-weight:bold;
+    color: #fff;
+}
+
 .header_bg{
     display:flex;
     align-items:center;
