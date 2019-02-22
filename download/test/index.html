@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="OKEx(内测)">
+    <title>OKEx(内测)</title>
+    <meta id="description" name="description" content="">
+    <meta property="og:title" content="OKEx(内测)">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="375">
+</head>
+
+<body>
+    <script type="text/javascript">
+        let u = navigator.userAgent;
+        let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+        let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        if (isiOS) {
+            window.location = 'ios.html'
+        } else {
+            window.location = 'android.html'
+        }
+    </script>
+</body>
+
+</html>
