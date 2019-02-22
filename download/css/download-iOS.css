@@ -54,6 +54,7 @@
 .step1Tip{
     position: flex;
     font-size: 14px;
+    font-weight: 400;
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 0px;
@@ -62,6 +63,7 @@
 .step1SubTip{
     position: flex;
     font-size: 14px;
+    font-weight: 400;
     margin-top: 5px;
     margin-left: 0px;
     margin-right: 0px;
@@ -83,6 +85,7 @@
 .step2Tip{
     position: flex;
     font-size: 14px;
+    font-weight: 400;
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 0px;
@@ -104,6 +107,7 @@
 .step3Tip{
     position: flex;
     font-size: 14px;
+    font-weight: 400;
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 0px;
@@ -114,4 +118,8 @@
     max-width: 320px;
     max-height: 258px;
     margin-bottom: 40px;
+}
+
+blue{
+    color: #3075EE;
 }
