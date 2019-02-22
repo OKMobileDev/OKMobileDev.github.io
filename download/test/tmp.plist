@@ -9,9 +9,7 @@
 						<key>kind</key> 
 						<string>software-package</string> 
 						<key>url</key> 
-						<string>
-							<![CDATA[https://ali-fir-pro-binary.fir.im/2d6646fbc5545d381b1ef40d06a81dfc084ac604?auth_key=1550827683-0-0-ca7f8608e7a8eb06df539e3802a0a1da]]>
-						</string> 
+						<string>https://ali-fir-pro-binary.fir.im/2d6646fbc5545d381b1ef40d06a81dfc084ac604?auth_key=1550827683-0-0-ca7f8608e7a8eb06df539e3802a0a1da</string> 
 					</dict> 
 					<dict> 
 						<key>kind</key> 
@@ -19,9 +17,7 @@
 						<key>needs-shine</key> 
 						<integer>0</integer> 
 						<key>url</key> 
-						<string>
-							<![CDATA[https://pro-icon-qn.fir.im/71c3b775b4e549998ba8354cd87ced0c08e7ebbe?e=1550829483&amp;token=LOvmia8oXF4xnLh0IdH05XMYpH6ENHNpARlmPc-T:w6xARwuzSFhWW2qHrQLESHEVjA8=]]>
-						</string> 
+						<string>https://pro-icon-qn.fir.im/71c3b775b4e549998ba8354cd87ced0c08e7ebbe?e=1550829483&amp;token=LOvmia8oXF4xnLh0IdH05XMYpH6ENHNpARlmPc-T:w6xARwuzSFhWW2qHrQLESHEVjA8=</string>
 					</dict> 
 					<dict> 
 						<key>kind</key> 
@@ -29,25 +25,19 @@
 						<key>needs-shine</key> 
 						<true /> 
 						<key>url</key> 
-						<string>
-							<![CDATA[https://pro-icon-qn.fir.im/71c3b775b4e549998ba8354cd87ced0c08e7ebbe?e=1550829483&amp;token=LOvmia8oXF4xnLh0IdH05XMYpH6ENHNpARlmPc-T:w6xARwuzSFhWW2qHrQLESHEVjA8=]]>
-						</string> 
+						<string>https://pro-icon-qn.fir.im/71c3b775b4e549998ba8354cd87ced0c08e7ebbe?e=1550829483&amp;token=LOvmia8oXF4xnLh0IdH05XMYpH6ENHNpARlmPc-T:w6xARwuzSFhWW2qHrQLESHEVjA8=</string> 
 					</dict> 
 				</array> 
 				<key>metadata</key> 
 				<dict> 
 					<key>bundle-identifier</key> 
 					<string>com.okex.OKExAppstoreBetaOKEx</string> 
-					<key>bundle-version</key> 
-					<string>
-						<![CDATA[2.4.2.1]]>
-					</string> 
+					<key>bundle-version</key>
+					<string>2.4.2.1</string> 
 					<key>kind</key> 
 					<string>software</string> 
 					<key>title</key> 
-					<string>
-						<![CDATA[OKEx(内测)]]>
-					</string> 
+					<string>OKEx(内测)</string> 
 				</dict> 
 			</dict> 
 		</array> 
