@@ -16,9 +16,9 @@
 
 .logo{
     position: flex;
-    margin-top: 30pt;
-    width: 60pt;
-    height: 60pt;
+    margin-top: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 .name{
@@ -30,16 +30,9 @@
     color: #fff;
 }
 
-.installBg{
-    position: flex;
-    margin-top: 20pt;
-    width: 200px;
-    height: 64px;
-}
-
 .btn{
     position: flex;
-    margin-top: 30px;
+    margin-top: 40px;
     width: 180px;
     height: 44px;
     font-size: 18px;
@@ -48,7 +41,7 @@
     background-color: #fff;
     border-radius: 22px;
     border: 0px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 3px 6px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1), 0 3px 10px 0 rgba(0,0,0,0.1);
 }
 
 .step1{
