@@ -4,7 +4,6 @@ document.getElementById('install').onclick = function () {
     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     if (isiOS) {
         if (-1 < window.location.toString().indexOf("ios.html")) {
-            alert("iOS 下载");
             window.location.href = "https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist"
         } else {
             window.location = 'ios.html'
