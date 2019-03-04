@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
 
+<script>
+    //声明_czc对象:
+    var _czc = _czc || [];
+</script>
+
 <head>
     <meta charset="utf-8">
     <meta name="title" content="CoinAll(内测)">
@@ -25,11 +30,6 @@
     </div>
 </body>
 
-<script type="text/javascript">
-    document.getElementById('install').onclick = function () {
-        - 1 < navigator.userAgent.indexOf("iPhone") || -1 < navigator.userAgent.indexOf("iOS") ? window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-coinall-manifest.plist" : window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/CoinAll-android.apk"
-    }
-</script>
-
+<script type="text/javascript" src="install.js"></script>
 
 </html>
