@@ -74,24 +74,48 @@ function downloadAction() {
  * 商店版下载
  */
 function okexStoreDownload(isiOS, channelID) {
+    var url = null;
     if (isiOS) {
         _czc.push(["_trackEvent", "下载", "okex_store_ios_install_click", channelID]);
-        window.location.href = "https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8";
+        url = "https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8";
+        window.location.href = url;
     } else {
         _czc.push(["_trackEvent", "下载", "okex_store_android_install_click", channelID]);
-        window.location.href = "https://play.google.com/store/apps/details?id=com.okinc.okex";
+        url = "https://play.google.com/store/apps/details?id=com.okinc.okex";
+        window.location.href = url;
     }
+    //Google Analytics
+    gtag_report_conversion(url);
 }
 
 /**
  * 内测版下载
  */
 function okexBetaDownload(isiOS, channelID) {
+    var url = null;
     if (isiOS) {
         _czc.push(["_trackEvent", "下载", "okex_ios_install_click", channelID]);
-        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
+        url = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
+        window.location.href = url;
     } else {
         _czc.push(["_trackEvent", "下载", "okex_android_install_click", channelID]);
-        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+        url = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+        window.location.href = url;
     }
+    //Google Analytics
+    gtag_report_conversion(url);
+}
+
+/**
+ * Event snippet for 下载 conversion page In your html page, 
+ * add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
+ */
+function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof (url) != 'undefined') {
+            window.location = url;
+        }
+    };
+    gtag('event', 'conversion', { 'send_to': 'AW-760667109/EVYKCICdm5YBEOW32-oC', 'event_callback': callback });
+    return false;
 }
