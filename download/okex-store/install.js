@@ -13,7 +13,7 @@ $(document).ready(function(){
 });
 
 /**
- * 
+ * 根据 key 查询参数值
  * @param {String} key
  */
 function getQueryResult(key) {
@@ -46,7 +46,7 @@ function isWeChat(){
 function downloadAction() {
     let u = navigator.userAgent;
     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    
+
     //渠道ID
     var channelID = getQueryResult("channelID");
     channelID = channelID.length > 0 ? channelID : "";
