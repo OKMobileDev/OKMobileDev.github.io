@@ -35,7 +35,7 @@
     width: 64px;
     height: 2px;
     margin-top: 15px;
-    background: linear-gradient(to right, #5795F1, #205FEC, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, #5795F1, #205FEC, #205FEC00);
 }
 
 .content{
