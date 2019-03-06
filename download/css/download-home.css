@@ -11,6 +11,8 @@
 
 .body{
     display:flex;
+    background: linear-gradient(to bottom right, #0E1967, #070C39);
+    background-attachment: fixed;
     flex-direction: column;
     justify-content:center;
     align-items: center;
@@ -77,6 +79,7 @@
 .btn{
     position: flex;
     margin-top: 20px;
+    margin-bottom: 60px;
     width: 295px;
     height: 44px;
     font-size: 16px;
