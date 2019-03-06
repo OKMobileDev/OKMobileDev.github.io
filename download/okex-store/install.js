@@ -1,4 +1,35 @@
-document.getElementById('install').onclick = function () {
+/**
+ * 按钮点击事件
+ */
+$(document).ready(function(){
+    $(".button").click(function(){
+        var isWx = isWeChat();
+        if (isWx) {
+            $(".wx-tip").show();
+        } else {
+            downloadAction();
+        }
+    });
+});
+
+/**
+ * 判断是否是微信
+ */
+function isWeChat(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+		return true;
+    }
+    if (ua.match(/MicroMessenger/i) == 'wxwork') {
+        return true;
+    }
+	return false;
+};
+
+/**
+ * 下载事件
+ */
+function downloadAction() {
     let u = navigator.userAgent;
     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     if (isiOS) {
