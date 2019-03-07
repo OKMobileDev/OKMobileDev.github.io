@@ -66,7 +66,7 @@ function downloadAction() {
     if (location.indexOf("okex-store") != -1) {
         okexStoreDownload(isiOS, channelID);
     } else if (location.indexOf("okex-channel") != -1) {
-        okexBetaDownload(isiOS, channelID);
+        okexChannelDownload(isiOS, channelID);
     }
 }
 
@@ -89,9 +89,9 @@ function okexStoreDownload(isiOS, channelID) {
 }
 
 /**
- * 内测版下载
+ * 内测渠道版下载
  */
-function okexBetaDownload(isiOS, channelID) {
+function okexChannelDownload(isiOS, channelID) {
     var url = null;
     if (isiOS) {
         _czc.push(["_trackEvent", "下载", "okex_ios_install_click", channelID]);
