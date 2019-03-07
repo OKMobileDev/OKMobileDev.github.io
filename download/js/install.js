@@ -69,6 +69,10 @@ function downloadAction() {
         okexChannelDownload(isiOS, channelID);
     } else if (location.indexOf('/okex/') !== -1) {
         okexBetaDownload(isiOS, channelID);
+    } else if (location.indexOf("okex-vn") !== -1) {
+        okexVNStoreDownload(isiOS, channelID);
+    } else if (location.indexOf("oknodes") !== -1) {
+        oknodesBetaDownload(isiOS, channelID);
     }
 }
 
@@ -118,6 +122,32 @@ function okexBetaDownload(isiOS, channelID) {
     } else {
         _czc.push(["_trackEvent", "下载", "okex_android_install_click", channelID]);
         window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+    }
+}
+
+/**
+ * 越南版商店下载
+ */
+function okexVNStoreDownload(isiOS, channelID) {
+    if (isiOS) {
+        _czc.push(["_trackEvent", "下载", "okex_vn_ios_install_click", channelID]);
+        window.location.href = "https://itunes.apple.com/app/id1327268470";
+    } else {
+        _czc.push(["_trackEvent", "下载", "okex_vn_android_install_click", channelID]);
+        window.location.href = "https://play.google.com/store/apps/details?id=com.okinc.okex";
+    }
+}
+
+/**
+ * OKNodes 内测下载
+ */
+function oknodesBetaDownload(isiOS, channelID) {
+    if (isiOS) {
+        _czc.push(["_trackEvent", "下载", "oknodes_ios_install_click", channelID]);
+        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-nodes-manifest.plist";
+    } else {
+        _czc.push(["_trackEvent", "下载", "oknodes_android_install_click", channelID]);
+        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKNodes-android.apk";
     }
 }
 
