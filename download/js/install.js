@@ -63,10 +63,12 @@ function downloadAction() {
     channelID = channelID.length > 0 ? channelID : "";
     //区分站点
     var location = window.location.toString();
-    if (location.indexOf("okex-store") != -1) {
+    if (location.indexOf("okex-store") !== -1) {
         okexStoreDownload(isiOS, channelID);
-    } else if (location.indexOf("okex-channel") != -1) {
+    } else if (location.indexOf("okex-channel") !== -1) {
         okexChannelDownload(isiOS, channelID);
+    } else if (location.indexOf('/okex/') !== -1) {
+        okexBetaDownload(isiOS, channelID);
     }
 }
 
@@ -94,11 +96,11 @@ function okexStoreDownload(isiOS, channelID) {
 function okexChannelDownload(isiOS, channelID) {
     var url = null;
     if (isiOS) {
-        _czc.push(["_trackEvent", "下载", "okex_ios_install_click", channelID]);
+        _czc.push(["_trackEvent", "下载", "okex_channel_ios_install_click", channelID]);
         url = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
         window.location.href = url;
     } else {
-        _czc.push(["_trackEvent", "下载", "okex_android_install_click", channelID]);
+        _czc.push(["_trackEvent", "下载", "okex_channel_android_install_click", channelID]);
         url = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
         window.location.href = url;
     }
@@ -107,6 +109,20 @@ function okexChannelDownload(isiOS, channelID) {
 }
 
 /**
+ * 内测版下载
+ */
+function okexBetaDownload(isiOS, channelID) {
+    if (isiOS) {
+        _czc.push(["_trackEvent", "下载", "okex_ios_install_click", channelID]);
+        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
+    } else {
+        _czc.push(["_trackEvent", "下载", "okex_android_install_click", channelID]);
+        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+    }
+}
+
+/**
+ * Google Analytics
  * Event snippet for 下载 conversion page In your html page, 
  * add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
  */
