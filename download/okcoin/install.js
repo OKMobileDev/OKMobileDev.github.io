@@ -73,7 +73,7 @@ function okcoinBetaDownload(isiOS, channelID) {
  */
 function okcoinStoreDownload(isiOS, channelID) {
     if (isiOS) {
-        window.location.href = "https://itunes.apple.com/us/developer/okcoin-usa-inc/id1453135361?mt=8&uo=4";
+        window.location.href = "https://itunes.apple.com/us/app/okcoin-bitcoin-trading-exch/id867444712?mt=8";
         _czc.push(["_trackEvent", "下载", "okcoin_store_ios_install_click", channelID]);
     } else {
         window.location.href = "https://play.google.com/store/apps/details?id=com.okinc.okcoin.intl";
