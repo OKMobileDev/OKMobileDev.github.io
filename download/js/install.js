@@ -68,7 +68,13 @@ function downloadAction() {
     } else if (location.indexOf("okex-channel") !== -1) {
         okexChannelDownload(isiOS, channelID);
     } else if (location.indexOf('/okex/') !== -1) {
-        okexBetaDownload(isiOS, channelID);
+        var isForeign = getQueryResult("isForeign");
+        //国外 iOS 用户跳转到 AppStore
+        if (isForeign == true && isiOS) {
+            okexStoreDownload(isiOS, channelID);
+        } else {
+            okexBetaDownload(isiOS, channelID);
+        }
     } else if (location.indexOf("okex-vn") !== -1) {
         okexVNStoreDownload(isiOS, channelID);
     } else if (location.indexOf("oknodes") !== -1) {
