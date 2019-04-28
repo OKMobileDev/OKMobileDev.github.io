@@ -20,7 +20,10 @@ window.onload = function () {
     if (window.location.toString().indexOf('android') !== -1) {
         onDownloadButtonClick();
     } else if (isForeign == true) {// iOS 国外用户自动触发下载
-        clearContent();
+        var isWx = isWeChat();
+        if (isWx == false) {
+            clearContent();
+        }
         onDownloadButtonClick();
     }
 }
