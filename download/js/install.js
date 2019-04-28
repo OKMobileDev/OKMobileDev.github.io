@@ -9,12 +9,17 @@ $(document).ready(function () {
     $(".btn").click(function () {
         onDownloadButtonClick();
     });
+});
 
+/**
+ * 自动触发事件
+ */
+window.onload = function () {
     //Android 自动触发下载事件
     if (window.location.toString().indexOf('android') !== -1) {
         onDownloadButtonClick();
     }
-});
+}
 
 /**
  * 下载按钮点击
@@ -61,7 +66,8 @@ function isWeChat() {
  */
 function downloadAction() {
     //设备判断
-    let isiOS = window.location.toString().indexOf('ios') !== -1;
+    let u = navigator.userAgent;
+    let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     //渠道ID
     var channelID = getQueryResult("channelID");
     channelID = channelID.length > 0 ? channelID : "";
