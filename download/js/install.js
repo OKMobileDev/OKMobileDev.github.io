@@ -15,23 +15,19 @@ $(document).ready(function () {
  * 自动触发事件
  */
 window.onload = function () {
-    var isForeign = getQueryResult("isForeign");
+    //区分站点
+    var location = window.location.toString();
+    var isOKEx = location.indexOf('/okex/') !== -1;
+
     //Android 自动触发下载事件
     if (window.location.toString().indexOf('android') !== -1) {
         onDownloadButtonClick();
-    } else if (isForeign == true) {// iOS 国外用户自动触发下载
-        var isWx = isWeChat();
-        if (isWx == false) {
-            clearContent();
-        }
+    }
+
+    //iOS OKEx 商店版自动触发下载事件
+    else if (window.location.toString().indexOf('ios-store') !== -1 && isOKEx == true) {
         onDownloadButtonClick();
     }
-}
-
-function clearContent() {
-    document.open();
-    document.clear();
-    document.close();
 }
 
 /**
