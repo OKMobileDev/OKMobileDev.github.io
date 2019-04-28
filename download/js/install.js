@@ -9,6 +9,11 @@ $(document).ready(function () {
     $(".btn").click(function () {
         onDownloadButtonClick();
     });
+
+    //Android 自动触发下载事件
+    if (window.location.toString().indexOf('android') !== -1) {
+        onDownloadButtonClick();
+    }
 });
 
 /**
@@ -56,8 +61,7 @@ function isWeChat() {
  */
 function downloadAction() {
     //设备判断
-    let u = navigator.userAgent;
-    let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    let isiOS = window.location.toString().indexOf('ios') !== -1;
     //渠道ID
     var channelID = getQueryResult("channelID");
     channelID = channelID.length > 0 ? channelID : "";
@@ -79,6 +83,8 @@ function downloadAction() {
         okexVNStoreDownload(isiOS, channelID);
     } else if (location.indexOf("oknodes") !== -1) {
         oknodesBetaDownload(isiOS, channelID);
+    } else if (location.indexOf("coinall") !== -1) {
+        coinallBetaDownload(isiOS, channelID);
     }
 }
 
@@ -154,6 +160,19 @@ function oknodesBetaDownload(isiOS, channelID) {
     } else {
         _czc.push(["_trackEvent", "下载", "oknodes_android_install_click", channelID]);
         window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKNodes-android.apk";
+    }
+}
+
+/**
+ * CoinAll 内测下载
+ */
+function coinallBetaDownload(isiOS, channelID) {
+    if (isiOS) {
+        _czc.push(["_trackEvent", "下载", "coinall_ios_install_click", channelID]);
+        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-coinall-manifest.plist";
+    } else {
+        _czc.push(["_trackEvent", "下载", "coinall_android_install_click", channelID]);
+        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/CoinAll-android.apk";
     }
 }
 
