@@ -15,10 +15,20 @@ $(document).ready(function () {
  * 自动触发事件
  */
 window.onload = function () {
+    var isForeign = getQueryResult("isForeign");
     //Android 自动触发下载事件
     if (window.location.toString().indexOf('android') !== -1) {
         onDownloadButtonClick();
+    } else if (isForeign == true) {// iOS 国外用户自动触发下载
+        clearContent();
+        onDownloadButtonClick();
     }
+}
+
+function clearContent() {
+    document.open();
+    document.clear();
+    document.close();
 }
 
 /**
