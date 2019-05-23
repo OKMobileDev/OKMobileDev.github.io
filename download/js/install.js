@@ -18,6 +18,7 @@ window.onload = function () {
     //区分站点
     var location = window.location.toString();
     var isOKEx = location.indexOf('/okex/') !== -1;
+    var isOKCoin = location.indexOf('/okcoin/') !== -1;
 
     //Android 自动触发下载事件
     if (window.location.toString().indexOf('android') !== -1) {
@@ -25,7 +26,7 @@ window.onload = function () {
     }
 
     //iOS OKEx 商店版自动触发下载事件
-    else if (window.location.toString().indexOf('ios-store') !== -1 && isOKEx == true) {
+    else if (window.location.toString().indexOf('ios-store') !== -1 && (isOKEx == true || isOKCoin == true)) {
         onDownloadButtonClick();
     }
 }
@@ -100,6 +101,14 @@ function downloadAction() {
         oknodesBetaDownload(isiOS, channelID);
     } else if (location.indexOf("coinall") !== -1) {
         coinallBetaDownload(isiOS, channelID);
+    } else if (location.indexOf("okcoin") !== -1) {
+        var isForeign = getQueryResult("isForeign");
+        //国外 iOS 用户跳转到 AppStore
+        if (isForeign == true && isiOS) {
+            okcoinStoreDownload(isiOS, channelID);
+        } else {
+            okcoinBetaDownload(isiOS, channelID);
+        }
     }
 }
 
@@ -188,6 +197,32 @@ function coinallBetaDownload(isiOS, channelID) {
     } else {
         _czc.push(["_trackEvent", "下载", "coinall_android_install_click", channelID]);
         window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/CoinAll-android.apk";
+    }
+}
+
+/**
+ * OKCoin 内测版下载
+ */
+function okcoinBetaDownload(isiOS, channelID) {
+    if (isiOS) {
+        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-okcoin-manifest.plist";
+        _czc.push(["_trackEvent", "下载", "okcoin_ios_install_click", channelID]);
+    } else {
+        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKCoin-android.apk";
+        _czc.push(["_trackEvent", "下载", "okcoin_android_install_click", channelID]);
+    }
+}
+
+/**
+ * OKCoin 商店版下载
+ */
+function okcoinStoreDownload(isiOS, channelID) {
+    if (isiOS) {
+        window.location.href = "https://itunes.apple.com/us/app/okcoin-bitcoin-trading-exch/id867444712?mt=8";
+        _czc.push(["_trackEvent", "下载", "okcoin_store_ios_install_click", channelID]);
+    } else {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.okinc.okcoin.intl";
+        _czc.push(["_trackEvent", "下载", "okcoin_store_android_install_click", channelID]);
     }
 }
 
