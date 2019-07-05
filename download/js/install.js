@@ -203,7 +203,7 @@ function coinallBetaDownload(isiOS, channelID) {
 }
 
 /**
- * CoinAll 内测下载
+ * 99ex 内测下载
  */
 function ex99BetaDownload(isiOS, channelID) {
     if (isiOS) {
