@@ -109,6 +109,8 @@ function downloadAction() {
         } else {
             okcoinBetaDownload(isiOS, channelID);
         }
+    } else if (location.indexOf("99ex") !== -1) {
+        ex99BetaDownload(isiOS, channelID);
     }
 }
 
@@ -197,6 +199,19 @@ function coinallBetaDownload(isiOS, channelID) {
     } else {
         _czc.push(["_trackEvent", "下载", "coinall_android_install_click", channelID]);
         window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/CoinAll-android.apk";
+    }
+}
+
+/**
+ * CoinAll 内测下载
+ */
+function ex99BetaDownload(isiOS, channelID) {
+    if (isiOS) {
+        _czc.push(["_trackEvent", "下载", "99ex_ios_install_click", channelID]);
+        window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-99ex-manifest.plist";
+    } else {
+        _czc.push(["_trackEvent", "下载", "99ex_android_install_click", channelID]);
+        window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/99ex-android.apk";
     }
 }
 
