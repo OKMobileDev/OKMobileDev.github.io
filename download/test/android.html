@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="title" content="OKEx(内测)">
-    <title>OKEx(内测)</title>
-    <meta id="description" name="description" content="">
-    <meta property="og:title" content="OKEx(内测)">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="title" content="OKEx">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <meta name="MobileOptimized" content="375">
-    <link rel="stylesheet" type="text/css" href="../css/download.css">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/homepage.header.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
 </head>
 
-<body>
-    <div class="header">
-        <img class="header_bg" src="../images/header_bg.png" />
-        <img class="logo" src="../images/logo.png">
-        <div class="name">OKEx</div>
+<body class="body">
+    <div id="app" class="content-bg">
+        <el-row type="flex" class="header-bg">
+            <el-image class="header-logo" src="./images/logo.png" fit="fit"></el-image>
+            <span class="header-main-name">{{ headerName }}</span>
+        </el-row>
+        <el-row type="flex" class="main-title-bg" justify="center">
+            <span class="main-title">{{ headerTitle }}</span>
+        </el-row>
+        <el-row type="flex" class="main-subtitle-bg" justify="center">
+            <span class="main-subtitle">{{ headerSubtitle }}</span>
+        </el-row>
+        <android-install-footer></android-install-footer>
     </div>
-
-    <img class="center" src="../images/center.png" />
-    <div class="bottom">
-        <img class="install" src="../images/install_button.png" />
-        <text class="install_title">安装/Install</text>
-        <a id="install" class="button"></a>
-    </div>
-    <img class="bottom_ring" src="../images/bottom_ring.png"><img>
 </body>
 
-<script src="../vendor/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="install.js"></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<!-- import JavaScript -->
+<script src="../test/component/android.footer.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                headerName: 'OKEX',
+                headerTitle: '全球领先的数字资产交易平台',
+                headerSubtitle: '安全 · 稳定 · 可信',
+            }
+        },
+        methods: {
+        }
+    });
+</script>
 
 </html>

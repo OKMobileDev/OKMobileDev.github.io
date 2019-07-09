@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1562660307352'); /* IE9 */
+  src: url('iconfont.eot?t=1562660307352#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPwAAsAAAAACCgAAAOjAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDfIMvATYCJAMMCwgABCAFhG0HSRsIB1FUbZpkX2DbsCexjMsCiVJVb2V6d8A7PYfwtoyKMYAFXIYAgHh4WvvfuTPz9qs0teTRqyXRpkDIFklQCiXzS4SoFtrOq2ufUh5UcMk7NnGZ8O00KaWeC6L21SfzTaf/J518F22ADG38rfEHaO3/v58fM5bU3MDFGzdNZJ9Wfd/Z8Y0KI6m5xab9x73j/6vzf4HMZ1lOa9LYyzZ1AcYBBbTGICiRQLwH7GrQTS0n0GpYOma3sb0LcAqrXSCeyJITcDmZ0pIcmoWqZmgRrzU0p5fpFV6F349floIjaWTWSoc3DR5Q/TXq+7tcnYs868V0GgijyFgEFOKqVneCjX2LWK2a2Lc9ulKENJWzrgnZurTa6B8vERUrsR3MoihdFMelE/y5s1Di+kdRoRlvAPXnSIg4xA/zsQQGGnie8vR2V3bxAHN8WNqYmFk1Ja5K49SrGxMbRBaX+mLCiRG3NtDT3nNinTDVIfXIgdx1KgaiAPJBZPfhDIMvXGMAGip1su1IdK/M7darAfn23NVJg/py28UPYd1RhgH16flrz22X7pL3/Y39xh6XR/dk77wqrveUyy98Q7oheOWIlJn0aHwK/+/iW4hp1Zlicp61B9Pr4fxds0PPcH+iGEn8ReB+P+u3yqQxsRvjT91e5LFZYZkt9RP1XvUwy+YpSm/82CIFJwRDZGHfzZo61zAPcVOvx2JsjHFw1yruhsGXPzRUP967SGKLOn27cn38c6/VlwqTyyXPcu/OzxPbxDowf4o9KKfPYnfu3NP147GB+FvR1rnqMnR9TLNFAgeAunwzz4aYee8XgWD6YfqJvav8PycW8D6kvwFrbQF0hebb1Qe/j0MsKDrPkueisl22ac9u/SJNApmiSs2Yen0aLh0gJxKaDaSQNBmCrNkkUgiL0NBmBSrNNqDVgqbRbfoQrCgtmLcIELrdgKTTW8i6vUYK4SM0DPoOle5godVRhE/ZZjpkoY4gJ0Ue6BqFstvQsaOkQpTcgaRB1UmyvJDUg4hXdsKczOxisAnpiEzRwzsk5VKKISaGBhthNaSqBjSJMYDcNLOfUrM0KwvXPSjTbWhAsINAnCjEA3IZBcncDDrsl6aE0uc7IJJBKifSkldj7IEQXnLlUI5M2QSkSayT8m7lFK8hklwUhUEYYdBAjaBBVNtngMz6RgMQNypT/wCPqVQWUwxTxZnLS7X3WwatrLo5UuQouq7VjJPPzHDqHmLInsB8lGmqCAAA') format('woff2'),
+  url('iconfont.woff?t=1562660307352') format('woff'),
+  url('iconfont.ttf?t=1562660307352') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1562660307352#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-el-icon-android:before {
+  content: "\e616";
+}
+
+.icon-el-icon-apple:before {
+  content: "\edd8";
+}
+

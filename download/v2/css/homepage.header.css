@@ -1,0 +1,60 @@
+*{
+    margin:0px; 
+    padding:0px;
+}
+
+.body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.content-bg {
+    background-image: url("../../test/images/hader-bg.png");
+    background-repeat:no-repeat;
+    background-size: 100% 204px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 204px;
+}
+
+.header-bg {
+    position: flex;
+    margin-top: 36px;
+    margin-left: 32px;
+    align-items: center;
+}
+
+.header-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.header-main-name {
+    margin-left: 3px;
+    font-size: 53;
+    color: white;
+    font-weight: 900;
+}
+
+.main-title-bg {
+    margin-top: 17px;
+}
+
+.main-title {
+    margin-left: 3px; 
+    font-size: 53;
+    color: white;
+    font-weight: 900;
+}
+
+.main-subtitle-bg {
+    margin-top: 17px;
+}
+
+.main-subtitle {
+    margin-left: 3px; 
+    font-size: 53;
+    color: white;
+    font-weight: 900;
+}
