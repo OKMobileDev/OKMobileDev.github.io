@@ -7,6 +7,9 @@
     display: flex;
     justify-content:center;
     align-items: center;
+
+    /* bottom: 100px; */
+    margin-bottom: 100px;
 }
 
 .content-bg {
@@ -32,9 +35,10 @@
 
 .header-main-name {
     margin-left: 3px;
-    font-size: 53;
+    font-size: 20px;
     color: white;
-    font-weight: 900;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .main-title-bg {
@@ -43,9 +47,9 @@
 
 .main-title {
     margin-left: 3px; 
-    font-size: 53;
+    font-size: 24px;
     color: white;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .main-subtitle-bg {
@@ -54,7 +58,42 @@
 
 .main-subtitle {
     margin-left: 3px; 
-    font-size: 53;
+    font-size: 14px;
     color: white;
-    font-weight: 900;
+}
+
+.tips-content {
+    margin-top: 90px;
+    margin-left: 41px;
+}
+
+.tips-cell {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.tips-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.tips-text-content {
+    margin-left: 15px;
+}
+
+.tips-text-title {
+    font-size: 14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    line-height:20px;
+    color: #333333;
+}
+
+.tips-text-subtitle {
+    font-size: 12px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    line-height:20px;
+    color: #666666;
 }
