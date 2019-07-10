@@ -5,6 +5,7 @@ new Vue({
             headerName: 'OKEX',
             headerTitle: '全球领先的数字资产交易平台',
             headerSubtitle: '安全 · 稳定 · 可信',
+            logo: '../test/images/logo.png',
             tipsData: [{
                 icon: '../v2/icon/icon_security.png',
                 title: '更安全',

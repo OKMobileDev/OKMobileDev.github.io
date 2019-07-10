@@ -16,7 +16,7 @@
 <body class="body">
     <div id="app" class="content-bg">
         <el-row type="flex" class="header-bg">
-            <el-image class="header-logo" src="./images/logo.png" fit="fit"></el-image>
+            <el-image class="header-logo" :src="logo" fit="fit"></el-image>
             <span class="header-main-name">{{ headerName }}</span>
         </el-row>
         <el-row type="flex" class="main-title-bg" justify="center">
@@ -25,6 +25,8 @@
         <el-row type="flex" class="main-subtitle-bg" justify="center">
             <span class="main-subtitle">{{ headerSubtitle }}</span>
         </el-row>
+
+        <!-- footer -->
         <android-install-footer v-on:android-click="android"></android-install-footer>
 
         <div class="tips-content">
