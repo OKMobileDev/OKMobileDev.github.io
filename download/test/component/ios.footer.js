@@ -24,7 +24,7 @@ Vue.component('ios-install-footer', {
                 </div>
                 <div>
                     <div style="margin-top: 16px; text-align: center; font-size: 14px; font-weight: 900; color: #333333;">稳定安全，更新方便快捷</div>
-                    <div style="margin-top: 2px; text-align: center; font-size: 14px; color: #333333;">免费提供公共 Apple ID</div>
+                    <div style="margin-top: 2px; text-align: center; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif;">免费提供公共 Apple ID</div>
                 </div>
             </div>
             <div style="position: flex; width: 50%;">
@@ -33,7 +33,7 @@ Vue.component('ios-install-footer', {
                 </div>
                 <div>
                     <div style="margin-top: 16px; text-align: center; font-size: 14px; font-weight: 900; color: #333333;">安装简便快捷</div>
-                    <div style="margin-top: 2px; text-align: center; font-size: 14px; color: #333333;">更新需要再次安装</div>
+                    <div style="margin-top: 2px; text-align: center; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif;">更新需要再次安装</div>
                 </div>
             </div>
         </div>
