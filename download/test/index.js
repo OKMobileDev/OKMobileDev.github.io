@@ -37,7 +37,7 @@ new Vue({
             if (isWeChat() == true) {
                 $(".wx-tip").show();
             } else {
-                alert('下载 beta');
+                window.location = "ios-beta.html"
             }
         },
         android() {
