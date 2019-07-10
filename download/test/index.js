@@ -33,7 +33,7 @@ new Vue({
             alert('beta')
         },
         android() {
-            alert('android')
+            window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
         }
     }
 });
