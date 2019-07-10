@@ -8,6 +8,7 @@
     <meta name="MobileOptimized" content="375">
     <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/homepage.css">
     <link rel="stylesheet" href="../v2/css/homepage.header.css">
     <link rel="stylesheet" href="../v2/css/android.css">
     <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
@@ -26,9 +27,6 @@
             <span class="main-subtitle">{{ headerSubtitle }}</span>
         </el-row>
 
-        <!-- footer -->
-        <android-install-footer v-on:android-click="android"></android-install-footer>
-
         <div class="tips-content">
             <template v-for="tips in tipsData">
                 <div class="tips-cell">
@@ -45,6 +43,12 @@
                 </div>
             </template>
         </div>
+
+        <!-- footer -->
+        <android-install-footer v-on:android-click="android"></android-install-footer>
+
+        <!-- wechat tips -->
+        <wechat-tips-view></wechat-tips-view>
     </div>
 </body>
 
@@ -52,8 +56,11 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
 <!-- import JavaScript -->
 <script src="../v2/component/android.footer.js"></script>
+<script src="../v2/component/wechat.tips.js"></script>
+
 <script src="../test/index.js"></script>
 
 </html>

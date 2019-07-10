@@ -6,9 +6,11 @@ Vue.component('android-install-footer', {
         }
     },
     methods: {
-        handleDownload () {
-            this.install = '正在安装...';
-            this.loading = true;
+        handleDownload() {
+            if (isWeChat() == false) {
+                this.install = '正在安装...';
+                this.loading = true;
+            }
             this.$emit('android-click');
         }
     },
@@ -20,3 +22,17 @@ Vue.component('android-install-footer', {
     </div>
     `
 });
+
+/**
+ * 判断是否是微信
+ */
+function isWeChat() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+    }
+    if (ua.match(/MicroMessenger/i) == 'wxwork') {
+        return true;
+    }
+    return false;
+};

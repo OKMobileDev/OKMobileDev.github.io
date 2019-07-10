@@ -1,3 +1,11 @@
 .body {
     margin-bottom: 100px;
 }
+
+.wx-tip-img{
+    position: fixed;
+    margin-top: 15px;
+    right: 15px;
+    width: 163px;
+    height: 106px;
+}

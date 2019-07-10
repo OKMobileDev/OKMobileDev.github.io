@@ -27,13 +27,39 @@ new Vue({
     },
     methods: {
         ios_appstore() {
-            alert('appstore')
+            if (isWeChat() == true) {
+                $(".wx-tip").show();
+            } else {
+                alert('下载 store');
+            }
         },
         ios_beta() {
-            alert('beta')
+            if (isWeChat() == true) {
+                $(".wx-tip").show();
+            } else {
+                alert('下载 beta');
+            }
         },
         android() {
-            window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+            if (isWeChat() == true) {
+                $(".wx-tip").show();
+            } else {
+                window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+            }
         }
     }
 });
+
+/**
+ * 判断是否是微信
+ */
+function isWeChat() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+    }
+    if (ua.match(/MicroMessenger/i) == 'wxwork') {
+        return true;
+    }
+    return false;
+};
