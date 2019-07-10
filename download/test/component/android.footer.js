@@ -9,6 +9,7 @@ Vue.component('android-install-footer', {
         handleDownload () {
             this.install = '正在安装...';
             this.loading = true;
+            this.$emit('android-click');
         }
     },
     template: `

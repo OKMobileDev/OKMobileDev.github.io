@@ -7,10 +7,10 @@ Vue.component('ios-install-footer', {
     },
     methods: {
         handleAppstoreDownload () {
-            
+            this.$emit('ios-appstore-click');
         },
         handleBetaDownload () {
-            
+            this.$emit('ios-beta-click');
         }
     },
     template: `
