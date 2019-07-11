@@ -10,7 +10,7 @@ new Vue({
             creditLoading: false,
             install: '点击安装内测版',
             step1Title: "内测版特征",
-            creditTitle: '去信任OKEx内测版证书',
+            creditTitle: '去信任 OKEx 内测版证书',
             setp_2_tips_1: '安装后, 完成授信, 即可使用',
             setp_2_tips_2_1: '下载成功后，请点击',
             setp_2_tips_2_2: '【设置】-【通用】-【设备管理】或 【描述文件与设备管理】',
