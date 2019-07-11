@@ -33,6 +33,7 @@ new Vue({
     },
     methods: {
         handleDownload() {
+            window.location.href = 'https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8';
         },
     }
 });
