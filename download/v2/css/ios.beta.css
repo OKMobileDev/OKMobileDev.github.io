@@ -1,6 +1,7 @@
 *{
     margin:0px; 
     padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .body{
@@ -32,53 +33,55 @@
     position: flex;
     margin-top: 21px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 .step-content {
-    margin-top: 55px;
+    margin-top: 57px;
     width: 100%;
     height: 70px;
+}
+
+.step-subcontent {
     display: flex;
+    height: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
     justify-content: space-around;
 }
 
 .step-bottom-line {
-    position: absolute;
-    margin-top: 273px;
+    margin-top: -1px;
     height: 1px;
-    left: 24px;
-    right: 24px;
-    background-color: #D1D1D2;
-    z-index: -1;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-color: #F7F8FA;
 }
 
-.step-text-content {
-    display: flex;
-}
-
-.step-text-title-1 {
+.step-text-title-selected {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
     color: #3075EE;
+    height: 70px;
+    line-height: 70px;
 }
 
-.step-text-title-2 {
+.step-text-title-normal {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
     color: #CCCCCC;
+    height: 70px;
+    line-height: 70px;
 }
 
-.step-text-title-1-line {
-    position: absolute;
+.step-text-title-selected-line {
     height: 3px;
     background-color: #3075EE;
-    margin-top: 68px;
-    width: 76px;
+    margin-top: -3px;
 }
 
 .step1-title-content {
@@ -118,14 +121,13 @@
 .tips-text-title {
     display: flex;
     margin-left: 28px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .install-btn {
     margin-top: 41px;
     width: 240px; 
     height: 44px;
-    font-size: 14px; 
+    font-size: 16px; 
     background-color: #3075EE; 
     border-width: 0px
 }
@@ -134,4 +136,50 @@
     margin-top: 24px;
     width: 16px;
     height: 16px;
+}
+
+.step-2-logo {
+    margin-top: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.setp-2-tips-1 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 800;
+}
+
+.credit-btn {
+    margin-top: 25px;
+    width: 240px; 
+    height: 44px;
+    font-size: 16px; 
+    background-color: white;
+    border-width: 1px;
+    border-color: #3075EE;
+    color: #3075EE;
+}
+
+.setp-2-tips-2 {
+    margin-top: 30px;
+    margin-left: 24px;
+    margin-right: 24px;
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.credit-step-1-img {
+    margin-top: 20px;
+    width: 218px;
+    height: 198px;
+}
+
+.credit-step-2-img {
+    margin-top: 20px;
+    width: 218px;
+    height: 184px;
+    margin-bottom: 20px;
 }

@@ -16,16 +16,19 @@
         <el-image class="header-logo" :src="logo" fit="fit"></el-image>
         <span class="header-name">{{ name }}</span>
 
+        <!-- step 1 -->
         <div class="step-content">
-            <div class="step-text-content">
-                <div class="step-text-title-1">01 安装</div>
-                <div class="step-text-title-1-line"></div>
+            <div class="step-subcontent">
+                <div>
+                    <div class="step-text-title-selected">01 安装</div>
+                    <div class="step-text-title-selected-line"></div>
+                </div>
+                <div>
+                    <div class="step-text-title-normal">02 授信</div>
+                </div>
             </div>
-            <div class="step-text-content">
-                <div class="step-text-title-2">02 授信</div>
-            </div>
+            <div class="step-bottom-line"></div>
         </div>
-        <div class="step-bottom-line"></div>
 
         <!-- tips -->
         <div class="step1-title-content">
@@ -54,6 +57,30 @@
                 <i class="el-icon-picture-outline"></i>
             </div>
         </el-image>
+
+        <!-- step 2 -->
+        <div class="step-content">
+            <div class="step-subcontent">
+                <div>
+                    <div class="step-text-title-normal">01 安装</div>
+                </div>
+                <div>
+                    <div class="step-text-title-selected">02 授信</div>
+                    <div class="step-text-title-selected-line"></div>
+                </div>
+            </div>
+            <div class="step-bottom-line"></div>
+        </div>
+
+        <el-image class="step-2-logo" :src="logo2" fit="fit"></el-image>
+        <div class="setp-2-tips-1">{{ setp_2_tips_1 }}</div>
+        <!-- download -->
+        <el-button type="primary" class="credit-btn" :loading="creditLoading" @click="handleCredit">{{ creditTitle }}
+        </el-button>
+
+        <div class="setp-2-tips-2">{{ setp_2_tips_2_1 }}<font color="orange">{{ setp_2_tips_2_2 }}</font>{{ setp_2_tips_2_3 }} </div>
+        <el-image class="credit-step-1-img" :src="credit_step_1_img" fit="fit"></el-image>
+        <el-image class="credit-step-2-img" :src="credit_step_2_img" fit="fit"></el-image>
 
     </div>
 </body>
