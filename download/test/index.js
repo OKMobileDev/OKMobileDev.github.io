@@ -30,7 +30,7 @@ new Vue({
             if (isWeChat() == true) {
                 $(".wx-tip").show();
             } else {
-                alert('下载 store');
+                window.location = "ios-store.html"
             }
         },
         ios_beta() {

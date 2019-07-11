@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="OKEx">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta name="MobileOptimized" content="375">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/ios.store.css">
+</head>
+
+<body class="body">
+    <div id="app" class="content-bg">
+        <!-- header -->
+        <div class="header-content">
+            <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+            <div class="header-text-content">
+                <div class="header-text-title">{{ headerTitle }}</div>
+                <div class="header-text-subtitle">{{ headerSubtitle }}</div>
+            </div>
+        </div>
+
+        <!-- card part 1 -->
+        <div class="card-content">
+            <div class="card">
+                <img class="step-1-img" src="../v2/images/ios-store-step-1.png" />
+                <div class="line"></div>
+                <template v-for="tips in tipsData1">
+                    <div class="step-tips-content">
+                        <div class="step-tips-block"></div>
+                        <div class="step-tips-title">{{ tips.title }}</div>
+                    </div>
+                    <img class="tips-img" :src="tips.img" />
+                </template>
+            </div>
+        </div>
+
+        <!-- card part 2-->
+        <div class="card-content">
+            <div class="card">
+                <img class="step-1-img" src="../v2/images/ios-store-step-2.png" />
+                <div class="line"></div>
+                <template v-for="tips in tipsData2">
+                    <div class="step-tips-content">
+                        <div class="step-tips-block"></div>
+                        <div class="step-tips-title">{{ tips.title }}</div>
+                    </div>
+                    <img class="tips-img" :src="tips.img" />
+                </template>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./ios.store.js"></script>
+
+</html>

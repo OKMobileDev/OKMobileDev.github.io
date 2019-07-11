@@ -1,0 +1,121 @@
+*{
+    margin:0px; 
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.content-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../v2/images/header-ios-store.png");
+    background-repeat:no-repeat;
+    background-size: 100% 750px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 750px;
+    padding-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    margin-top: 37px;
+    width: 100%;
+    align-items: center;
+}
+
+.header-logo {
+    position: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: 22px;
+    flex-shrink:0;
+}
+
+.header-text-content {
+    margin-left: 15px;
+    margin-right: 26px;
+}
+
+.header-text-title {
+    font-size: 18px;
+    color: white;    
+}
+
+.header-text-subtitle {
+    font-size: 12px;
+    color: white;
+    margin-top: 6px;
+}
+
+.card-content {
+    margin-top: 33px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    box-shadow:1px 1px 2px 2px rgba(0,0,0,0.1);
+    border-radius:6px;
+    padding-bottom: 20px;
+}
+
+.step-1-img {
+    width: 152px;
+    height: 22px;
+    margin-top: 17px;
+}
+
+.step-2-img {
+    width: 152px;
+    height: 22px;
+    margin-top: 17px;
+}
+
+.line {
+    margin-top: 16px;
+    background-color: #F7F8FA;
+    width: 90%;
+    height: 1px;
+}
+
+.step-tips-content {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.step-tips-block {
+    background-color: #3075EE;
+    width: 4px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+.step-tips-title {
+    color: #000;
+    font-size: 14px;
+    margin-left: 12px;
+    margin-right: 9px;
+    font-weight: 600;
+}
+
+.tips-img {
+    margin-top: 24px;
+    background-size: contain;
+    display: block;
+    max-width: 75%;
+    height: auto;
+}
