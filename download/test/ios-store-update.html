@@ -43,7 +43,7 @@
                             </template>
 
                             <!-- content -->
-                            <div class="step-tips-content">
+                            <div class="step-tips-content" v-if="data.title">
                                 <div class="step-tips-block" v-if="data.title"></div>
                                 <div class="step-tips-title" v-if="data.title">{{ data.title }}<font color="orange">{{ data.password }}</font></div>
                             </div>
