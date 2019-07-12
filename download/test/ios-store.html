@@ -23,8 +23,43 @@
             </div>
         </div>
 
+        <template v-for="groupData in tableAllData">
+            <div class="card-content">
+                <div class="card">
+                    <img class="step-1-img" :src="groupData.img" />
+                    <div class="line"></div>
+                    <template v-for="data in groupData.data">
+                        <div class="step-tips-content">
+                            <div class="step-tips-block"></div>
+                            <div class="step-tips-title">{{ data.title }}</div>
+                        </div>
+
+                        <!-- form render -->
+                        <template v-if="data.formData">
+                            <div class="step-tips-subtitle">{{ data.formData.tips1 }}</div>
+
+                            <el-table class="account-table" :data="data.formData.tableData" border :row-style="rowStyle"
+                                :show-header="false" :cell-style="cellStyle">
+                                <el-table-column prop="account" label="账号"></el-table-column>
+                                <el-table-column prop="password" label="密码"></el-table-column>
+                            </el-table>
+
+                            <div class="step-tips-subtitle">{{ data.formData.tips2 }}</div>
+                        </template>
+
+                        <!-- image render -->
+                        <template v-else>
+                            <img class="tips-img" :src="data.img" />
+                        </template>
+
+                    </template>
+                </div>
+            </div>
+        </template>
+
+
         <!-- card part 1 -->
-        <div class="card-content">
+        <!-- <div class="card-content">
             <div class="card">
                 <img class="step-1-img" src="../v2/images/ios-store-step-1.png" />
                 <div class="line"></div>
@@ -36,24 +71,24 @@
                     <img class="tips-img" :src="tips.img" />
                 </template>
 
-                <!-- form -->
                 <div class="step-tips-content">
                     <div class="step-tips-block"></div>
                     <div class="step-tips-title">{{ formTitle }}</div>
                 </div>
                 <div class="step-tips-subtitle">{{ formSubtitle1 }}</div>
 
-                <el-table class="account-table" :data="tableData" border :row-style="rowStyle" :show-header="false" :cell-style="cellStyle">
+                <el-table class="account-table" :data="tableData" border :row-style="rowStyle" :show-header="false"
+                    :cell-style="cellStyle">
                     <el-table-column prop="account" label="账号"></el-table-column>
                     <el-table-column prop="password" label="密码"></el-table-column>
                 </el-table>
 
                 <div class="step-tips-subtitle">{{ formSubtitle2 }}</div>
             </div>
-        </div>
+        </div> -->
 
         <!-- card part 2-->
-        <div class="card-content">
+        <!-- <div class="card-content">
             <div class="card">
                 <img class="step-1-img" src="../v2/images/ios-store-step-2.png" />
                 <div class="line"></div>
@@ -65,7 +100,7 @@
                     <img class="tips-img" :src="tips.img" />
                 </template>
             </div>
-        </div>
+        </div> -->
 
         <!-- footer -->
         <ios-store-install-footer v-on:store-click="handleDownload" :title="footerTitle"></ios-store-install-footer>
