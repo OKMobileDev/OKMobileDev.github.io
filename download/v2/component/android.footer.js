@@ -1,7 +1,7 @@
 Vue.component('android-install-footer', {
+    props: ['install'],
     data: function () {
         return {
-            install: '安装 Android 版',
             loading: false,
         }
     },
