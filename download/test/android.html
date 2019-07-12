@@ -16,37 +16,39 @@
 
 <body class="body">
     <div id="app" class="content-bg">
-        <el-row type="flex" class="header-bg">
-            <el-image class="header-logo" :src="logo" fit="fit"></el-image>
-            <span class="header-main-name">{{ headerName }}</span>
-        </el-row>
-        <el-row type="flex" class="main-title-bg" justify="center">
-            <span class="main-title">{{ headerTitle }}</span>
-        </el-row>
-        <el-row type="flex" class="main-subtitle-bg" justify="center">
-            <span class="main-subtitle">{{ headerSubtitle }}</span>
-        </el-row>
+        <template>
+            <el-row type="flex" class="header-bg">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <span class="header-main-name">{{ headerName }}</span>
+            </el-row>
+            <el-row type="flex" class="main-title-bg" justify="center">
+                <span class="main-title">{{ headerTitle }}</span>
+            </el-row>
+            <el-row type="flex" class="main-subtitle-bg" justify="center">
+                <span class="main-subtitle">{{ headerSubtitle }}</span>
+            </el-row>
 
-        <div class="tips-content">
-            <template v-for="tips in tipsData">
-                <div class="tips-cell">
-                    <el-image class="tips-icon" :src=tips.icon fit="contain">
-                        <div slot="error" class="image-slot">
-                            <i class="el-icon-picture-outline"></i>
+            <div class="tips-content">
+                <template v-for="tips in tipsData">
+                    <div class="tips-cell">
+                        <el-image class="tips-icon" :src=tips.icon fit="contain">
+                            <div slot="error" class="image-slot">
+                                <i class="el-icon-picture-outline"></i>
+                            </div>
+                        </el-image>
+
+                        <div class="tips-text-content">
+                            <div class="tips-text-title">{{ tips.title }}</div>
+                            <div class="tips-text-subtitle">{{ tips.subtitle }}</div>
                         </div>
-                    </el-image>
-
-                    <div class="tips-text-content">
-                        <div class="tips-text-title">{{ tips.title }}</div>
-                        <div class="tips-text-subtitle">{{ tips.subtitle }}</div>
                     </div>
-                </div>
-            </template>
-        </div>
+                </template>
+            </div>
 
-        <!-- footer -->
-        <android-install-footer v-on:android-click="android"></android-install-footer>
-
+            <!-- footer -->
+            <android-install-footer v-on:android-click="android"></android-install-footer>
+        </template>
+        
         <!-- wechat tips -->
         <wechat-tips-view></wechat-tips-view>
     </div>
