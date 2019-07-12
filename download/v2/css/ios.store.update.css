@@ -100,13 +100,13 @@
     display: flex;
     width: 100%;
     margin-top: 20px;
-    align-items: center;
 }
 
 .step-tips-block {
     background-color: #3075EE;
     width: 4px;
     height: 12px;
+    margin-top: 4px;
     flex-shrink: 0;
 }
 
