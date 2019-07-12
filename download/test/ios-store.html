@@ -35,6 +35,20 @@
                     </div>
                     <img class="tips-img" :src="tips.img" />
                 </template>
+
+                <!-- form -->
+                <div class="step-tips-content">
+                    <div class="step-tips-block"></div>
+                    <div class="step-tips-title">{{ formTitle }}</div>
+                </div>
+                <div class="step-tips-subtitle">{{ formSubtitle1 }}</div>
+
+                <el-table class="account-table" :data="tableData" border :row-style="rowStyle" :show-header="false" :cell-style="cellStyle">
+                    <el-table-column prop="account" label="账号"></el-table-column>
+                    <el-table-column prop="password" label="密码"></el-table-column>
+                </el-table>
+
+                <div class="step-tips-subtitle">{{ formSubtitle2 }}</div>
             </div>
         </div>
 
@@ -53,8 +67,8 @@
             </div>
         </div>
 
-        <ios-store-install-footer v-on:store-click="handleDownload"></ios-store-install-footer>
-
+        <!-- footer -->
+        <ios-store-install-footer v-on:store-click="handleDownload" :title="footerTitle"></ios-store-install-footer>
     </div>
 </body>
 
