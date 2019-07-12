@@ -6,6 +6,8 @@ new Vue({
             headerTitle: '全球领先的数字资产交易平台',
             headerSubtitle: '安全 · 稳定 · 可信',
             androidInstallTitle: '安装 Android 版',
+            betaTitle: '安装内测版',
+            storeTitle: 'App Store',
             logo: './images/logo.png',
             tipsData: [{
                 icon: './icon/icon-security.png',

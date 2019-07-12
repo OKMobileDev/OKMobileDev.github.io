@@ -1,19 +1,4 @@
-Vue.component('ios-install-footer', {
-    props: ['betatitle', 'storetitle'],
-    data: function () {
-        return {
-        }
-    },
-    methods: {
-        handleAppstoreDownload() {
-            this.$emit('ios-appstore-click');
-        },
-        handleBetaDownload() {
-            this.$emit('ios-beta-click');
-        }
-    },
-    template: `
-    <div
+<div
     style="position: fixed; display: inline; background-color: white; bottom: 0; width: 100%; max-width: 500px; z-index: 999; box-shadow:0px 2px 4px 0px rgba(0,0,0,0.5);">
     <template v-if="betatitle && storetitle">
         <div style="display: flex;width: 100%; height: 130px;">
@@ -80,5 +65,3 @@ Vue.component('ios-install-footer', {
     <template v-else>
     </template>
 </div>
-    `
-});
