@@ -25,6 +25,7 @@ new Vue({
                         },
                         {
                             title: '在弹出框内输入密码 我们提供的公共账号密码统一为：',
+                            password: 'OK123456',
                             img: './images/ios-store-update-tips-1-4.png'
                         }
                     ]
@@ -35,6 +36,7 @@ new Vue({
                     data: [
                         {
                             title: '我们提供的公共账号密码统一为：',
+                            password: 'OK123456',
                             tips1: '为防止您的手机信息泄露，请务必不要使用公共Apple ID登录iCloud。使用参考Apple ID下载过后，请您及时退出该账号。'
                         }
                     ]

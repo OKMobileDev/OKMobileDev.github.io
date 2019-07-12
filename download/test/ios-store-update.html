@@ -45,7 +45,7 @@
                             <!-- content -->
                             <div class="step-tips-content">
                                 <div class="step-tips-block" v-if="data.title"></div>
-                                <div class="step-tips-title" v-if="data.title">{{ data.title }}</div>
+                                <div class="step-tips-title" v-if="data.title">{{ data.title }}<font color="orange">{{ data.password }}</font></div>
                             </div>
                             <div class="step-tips" v-if="data.tips1">{{ data.tips1 }}</div>
                             <img class="tips-img" :src="data.img" v-if="data.img" />
