@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: function () {
         return {
-            logo: '../test/images/logo-ios-store.png',
+            logo: './images/logo-ios-store.png',
             headerTitle: 'OKCoin App Store 安装',
             headerSubtitle: '如果您拥有非中国地区的 Apple ID，请直接使用该 ID 登录 App Store，下载 OKCoin APP 即可。',
             footerTitle: '我已知晓 去 App store 安装',
