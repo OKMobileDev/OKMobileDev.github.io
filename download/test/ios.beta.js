@@ -29,6 +29,7 @@ new Vue({
             this.loading = true;
             this.install = '正在安装...';
             window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
+            scrollTo("#step-content-2");
         },
         handleCredit() {
             this.creditLoading = true;
@@ -36,3 +37,13 @@ new Vue({
         }
     }
 });
+
+function scrollTo(ele, speed){
+	if(!speed) speed = 300;
+	if(!ele){
+		$("html,body").animate({scrollTop:0},speed);
+	}else{
+		if(ele.length>0) $("html,body").animate({scrollTop:$(ele).offset().top},speed);
+	}
+	return false;
+}
