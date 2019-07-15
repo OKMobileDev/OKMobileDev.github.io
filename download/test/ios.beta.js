@@ -17,6 +17,7 @@ new Vue({
             setp_2_tips_2_3: '找到 OKEx 内测版的证书并点击信任，即可使用 OKEx',
             credit_step_1_img: '../test/images/ios-beta-credit-setp-1.png',
             credit_step_2_img: '../test/images/ios-beta-credit-setp-2.png',
+            iosBetaDownloadURL: 'itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist',
             tipsData: [
                 { icon: '../v2/icon/icon-ios-checkmark.png', title: '无须海外 Apple ID，可直接安装' },
                 { icon: '../v2/icon/icon-ios-info.png', title: '更新需要重新下载安装' },
@@ -28,7 +29,7 @@ new Vue({
         handleDownload() {
             this.loading = true;
             this.install = '正在安装...';
-            window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
+            window.location.href = this.iosBetaDownloadURL;
             scrollTo("#step-2-content");
         },
         handleCredit() {

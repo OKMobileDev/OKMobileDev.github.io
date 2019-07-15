@@ -7,6 +7,7 @@ new Vue({
             footerTitle: '我已知晓 去 App Store 更新',
             formTitle: '输入非中国大陆苹果账号',
             headerSubtitle: '如果您拥有非中国地区的 Apple ID，请直接使用该 ID 登录 App Store，下载 OKEx APP 即可。',
+            downloadURL: 'https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8',
             tableAllData: [
                 {
                     index: '01',
@@ -98,7 +99,7 @@ new Vue({
     },
     methods: {
         handleDownload() {
-            window.location.href = 'https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8';
+            window.location.href = this.downloadURL;
         },
         rowStyle({ row, rowIndex }) {
             if (rowIndex == 0) {

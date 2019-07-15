@@ -6,6 +6,7 @@ new Vue({
             headerTitle: 'OKEx App Store 安装',
             headerSubtitle: '如果您拥有非中国地区的 Apple ID，请直接使用该 ID 登录 App Store，下载 OKEx APP 即可。',
             footerTitle: '我已知晓 去 App store 安装',
+            downloadURL: 'https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8',
             tableAllData: [
                 {
                     img: '../v2/images/ios-store-step-1.png',
@@ -67,7 +68,7 @@ new Vue({
     },
     methods: {
         handleDownload() {
-            window.location.href = 'https://itunes.apple.com/us/app/okex-bitcoin-cryptocurrency/id1327268470?mt=8';
+            window.location.href = this.downloadURL;
         },
         rowStyle({ row, rowIndex }) {
             if (rowIndex == 0) {

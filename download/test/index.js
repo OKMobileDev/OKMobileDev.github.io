@@ -9,6 +9,7 @@ new Vue({
             betaTitle: '安装内测版',
             storeTitle: 'App Store',
             logo: './images/logo.png',
+            androidDownloadURL: 'http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk',
             tipsData: [{
                 icon: './icon/icon-security.png',
                 title: '更安全',
@@ -47,7 +48,7 @@ new Vue({
             if (isWeChat() == true) {
                 $(".wx-tip").show();
             } else {
-                window.location.href = "http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+                window.location.href = this.androidDownloadURL;
             }
         }
     }
