@@ -42,6 +42,12 @@
     height: 70px;
 }
 
+.step-2-content {
+    margin-top: calc(100% - 300px);
+    width: 100%;
+    height: 70px;
+}
+
 .step-subcontent {
     display: flex;
     height: 100%;

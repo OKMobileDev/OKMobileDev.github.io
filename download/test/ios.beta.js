@@ -29,7 +29,7 @@ new Vue({
             this.loading = true;
             this.install = '正在安装...';
             window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
-            scrollTo("#step-content-2");
+            scrollTo("#step-2-content");
         },
         handleCredit() {
             this.creditLoading = true;
