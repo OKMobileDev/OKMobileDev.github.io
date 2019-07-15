@@ -8,7 +8,7 @@ new Vue({
             androidInstallTitle: '安装 Android 版',
             betaTitle: false,
             storeTitle: '去 App Store 安装',
-            logo: './images/okcoin-header-logo.png',
+            logo: './images/header-logo.png',
             androidDownloadURL: 'http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKCoin-android.apk',
             tipsData: [{
                 icon: './icon/icon-1.png',
