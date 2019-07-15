@@ -1,48 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh">
-
-<script>
-    //声明_czc对象:
-    var _czc = _czc || [];
-</script>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="title" content="CoinAll">
-    <title>CoinAll</title>
-    <meta id="description" name="description" content="">
-    <meta property="og:title" content="CoinAll">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta name="MobileOptimized" content="375">
-    <link rel="stylesheet" type="text/css" href="../css/download.css">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/homepage.css">
+    <link rel="stylesheet" href="../v2/css/homepage.header.css">
+    <link rel="stylesheet" href="../v2/css/android.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
+        <!-- cover -->
+        <link rel="stylesheet" href="./css/homepage.header.css">
 </head>
 
-<script
-    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1276378390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276378390' type='text/javascript'%3E%3C/script%3E"));</script>
-<script src="../vendor/jquery-3.3.1.min.js"></script>
+<body class="body">
+    <div id="app" class="content-bg">
+        <template>
+            <el-row type="flex" class="header-bg">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <span class="header-main-name">{{ headerName }}</span>
+            </el-row>
+            <el-row type="flex" class="main-title-bg" justify="center">
+                <span class="main-title">{{ headerTitle }}</span>
+            </el-row>
+            <el-row type="flex" class="main-subtitle-bg" justify="center">
+                <span class="main-subtitle">{{ headerSubtitle }}</span>
+            </el-row>
 
-<body>
-    <div class="header">
-        <img class="header_bg" src="../images/header_bg.png" />
-        <img class="logo" src="../images/coinall/logo.png">
-        <div class="name">CoinAll</div>
-    </div>
+            <div class="tips-content">
+                <template v-for="tips in tipsData">
+                    <div class="tips-cell">
+                        <el-image class="tips-icon" :src=tips.icon fit="contain">
+                            <div slot="error" class="image-slot">
+                                <i class="el-icon-picture-outline"></i>
+                            </div>
+                        </el-image>
 
-    <img class="center" src="../images/center.png" />
-    <div class="bottom">
-        <img class="install" src="../images/install_button.png" />
-        <text class="install_title">安装/Install</text>
-        <a id="install" class="button"></a>
-    </div>
-    <img class="bottom_ring" src="../images/bottom_ring.png"><img>
+                        <div class="tips-text-content">
+                            <div class="tips-text-title">{{ tips.title }}</div>
+                            <div class="tips-text-subtitle">{{ tips.subtitle }}</div>
+                        </div>
+                    </div>
+                </template>
+            </div>
 
-    <!-- tip content -->
-    <div class="wx-tip">
-        <img class="wx-tip-img" src="../images/wxtip.png">
+            <!-- footer -->
+            <android-install-footer v-on:android-click="android" :install="androidInstallTitle"></android-install-footer>
+        </template>
+        
+        <!-- wechat tips -->
+        <wechat-tips-view></wechat-tips-view>
     </div>
 </body>
 
-<script type="text/javascript" src="../js/install.js"></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<!-- import JavaScript -->
+<script src="../v2/component/android.footer.js"></script>
+<script src="../v2/component/wechat.tips.js"></script>
+<script src="../v2/js/analysis.js"></script>
+<script src="./index.js"></script>
 
 </html>

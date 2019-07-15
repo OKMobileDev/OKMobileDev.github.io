@@ -1,51 +1,68 @@
 <!DOCTYPE html>
-<html lang="zh">
-
-<script>
-    //声明_czc对象:
-    var _czc = _czc || [];
-</script>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="title" content="CoinAll">
-    <title>CoinAll</title>
-    <meta id="description" name="description" content="">
-    <meta property="og:title" content="CoinAll">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta name="MobileOptimized" content="375">
-    <link rel="stylesheet" type="text/css" href="../css/download-iOS.css">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/homepage.css">
+    <link rel="stylesheet" href="../v2/css/homepage.header.css">
+    <link rel="stylesheet" href="../v2/css/ios.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
+    <!-- cover -->
+    <link rel="stylesheet" href="./css/homepage.header.css">
 </head>
 
-<script
-    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1276378390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276378390' type='text/javascript'%3E%3C/script%3E"));</script>
-<script src="../vendor/jquery-3.3.1.min.js"></script>
-
 <body class="body">
-    <img class="logo" src="../images/coinall/logo.png" />
-    <text class="name">CoinAll</text>
-    <button class="btn" id="install">安装/Install</button>
-    <!-- step1 -->
-    <img class="step1" src="../images/step1_ios.png" />
-    <text class="step1Tip">完成安装 CoinAll APP 后，</text>
-    <text class="step1SubTip">进入手机 <blue>【设置】</blue>><blue>【通用】</blue>><blue>【设备管理】</blue></text>
-    <img class="step1Img" src="../images/step1_ios_img.png" />
-    <!-- step2 -->
-    <img class="step2" src="../images/step2_ios.png" />
-    <text class="step2Tip">确认是 CoinAll APP 的描述文件，点击“信任”</text>
-    <img class="step2Img" src="../images/coinall/step_2_ios_img.png" />
-    <!-- step3 -->
-    <img class="step3" src="../images/step3_ios.png" />
-    <text class="step3Tip">信任设置完成，快去使用 CoinAll APP 吧！</text>
-    <img class="step3Img" src="../images/coinall/step_3_ios_img.png" />
+    <div id="app" class="content-bg">
+        <template v-if="headerName">
+            <el-row type="flex" class="header-bg">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <span class="header-main-name">{{ headerName }}</span>
+            </el-row>
+            <el-row type="flex" class="main-title-bg" justify="center">
+                <span class="main-title">{{ headerTitle }}</span>
+            </el-row>
+            <el-row type="flex" class="main-subtitle-bg" justify="center">
+                <span class="main-subtitle">{{ headerSubtitle }}</span>
+            </el-row>
 
-    <!-- tip content -->
-    <div class="wx-tip">
-        <img class="wx-tip-img" src="../images/wxtip.png">
+            <!-- footer -->
+            <ios-install-footer v-on:ios-appstore-click="ios_appstore" v-on:ios-beta-click="ios_beta" :betatitle="betaTitle" :storetitle="storeTitle">
+            </ios-install-footer>
+
+            <div class="tips-content">
+                <template v-for="tips in tipsData">
+                    <div class="tips-cell">
+                        <el-image class="tips-icon" :src=tips.icon fit="contain">
+                            <div slot="error" class="image-slot">
+                                <i class="el-icon-picture-outline"></i>
+                            </div>
+                        </el-image>
+
+                        <div class="tips-text-content">
+                            <div class="tips-text-title">{{ tips.title }}</div>
+                            <div class="tips-text-subtitle">{{ tips.subtitle }}</div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+        <!-- wechat tips -->
+        <wechat-tips-view></wechat-tips-view>
     </div>
 </body>
 
-<script type="text/javascript" src="../js/install.js"></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<script src="../v2/component/ios.footer.js"></script>
+<script src="../v2/component/wechat.tips.js"></script>
+<script src="../v2/js/analysis.js"></script>
+<script src="./index.js"></script>
 
 </html>
