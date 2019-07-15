@@ -1,6 +1,7 @@
 *{
     margin:0px; 
     padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .body{
@@ -35,7 +36,6 @@
     font-size: 20px;
     color: white;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif
 }
 
 .main-title-bg {
@@ -43,20 +43,24 @@
 }
 
 .main-title {
-    margin-left: 3px; 
+    width: 100%;
     font-size: 24px;
     color: white;
     font-weight: 500;
+    text-align: center;
 }
 
 .main-subtitle-bg {
     margin-top: 17px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .main-subtitle {
     margin-left: 3px; 
     font-size: 14px;
     color: white;
+    font-weight: lighter;
 }
 
 .tips-content {
