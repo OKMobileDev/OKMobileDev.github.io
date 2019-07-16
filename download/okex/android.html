@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../v2/css/homepage.header.css">
     <link rel="stylesheet" href="../v2/css/android.css">
     <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
+    <!-- cover -->
+    <link rel="stylesheet" href="./css/homepage.header.css">
 </head>
 
 <body class="body">
@@ -45,9 +47,10 @@
             </div>
 
             <!-- footer -->
-            <android-install-footer v-on:android-click="android" :install="androidInstallTitle"></android-install-footer>
+            <android-install-footer v-on:android-click="android" :install="androidInstallTitle">
+            </android-install-footer>
         </template>
-        
+
         <!-- wechat tips -->
         <wechat-tips-view></wechat-tips-view>
     </div>
