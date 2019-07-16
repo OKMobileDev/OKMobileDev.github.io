@@ -8,8 +8,13 @@ Vue.component('android-install-footer', {
     methods: {
         handleDownload() {
             if (isWeChat() == false) {
+                var originInstallTitle = this.install;
                 this.install = '正在安装...';
                 this.loading = true;
+                setTimeout(() => {
+                    this.loading = false;
+                    this.install = originInstallTitle;
+                }, 3000);
             }
             this.$emit('android-click');
         }
