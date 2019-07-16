@@ -43,7 +43,8 @@
 }
 
 .step-2-content {
-    margin-top: calc(100% - 300px);
+    /* 使得步骤2处于第二屏 */
+    margin-top: calc((100vh - 460px - 44px) * 0.5);
     width: 100%;
     height: 70px;
 }
@@ -130,7 +131,8 @@
 }
 
 .install-btn {
-    margin-top: 41px;
+    /* 算出安装按钮居屏幕剩余空间一半的坐标 */
+    margin-top: calc((100vh - 460px - 44px) * 0.5);
     width: 280px; 
     height: 44px;
     font-size: 16px; 
@@ -138,27 +140,21 @@
     border-width: 0px
 }
 
-.arrow-icon {
-    margin-top: 24px;
-    width: 16px;
-    height: 16px;
-}
-
 .step-2-logo {
-    margin-top: 20px;
+    margin-top: 197px;
     width: 64px;
     height: 64px;
 }
 
 .setp-2-tips-1 {
-    margin-top: 20px;
+    margin-top: 24px;
     font-size: 16px;
     color: #333;
     font-weight: 800;
 }
 
 .credit-btn {
-    margin-top: 25px;
+    margin-top: 118px;
     width: 280px;
     height: 44px;
     font-size: 16px; 
@@ -169,7 +165,7 @@
 }
 
 .setp-2-tips-2 {
-    margin-top: 30px;
+    margin-top: 81px;
     margin-left: 24px;
     margin-right: 24px;
     font-size: 12px;
@@ -178,14 +174,8 @@
 }
 
 .credit-step-1-img {
-    margin-top: 20px;
+    margin-top: 31px;
     width: 218px;
     height: 198px;
-}
-
-.credit-step-2-img {
-    margin-top: 20px;
-    width: 218px;
-    height: 184px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
