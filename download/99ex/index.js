@@ -48,6 +48,7 @@ new Vue({
                 $(".wx-tip").show();
             } else {
                 window.location.href = this.androidDownloadURL;
+                downloadEvent("99ex_android_install_click");
             }
         }
     }
