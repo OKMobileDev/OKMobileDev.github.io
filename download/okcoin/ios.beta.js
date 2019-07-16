@@ -31,10 +31,17 @@ new Vue({
             this.install = '正在安装...';
             window.location.href = this.iosBetaDownloadURL;
             scrollTo("#step-2-content");
+            setTimeout(() => {
+                this.install = '点击安装内测版';
+                this.loading = false;
+            }, 3000);
         },
         handleCredit() {
             this.creditLoading = true;
             window.location.href = '../v2/resources/setting.mobileprovision';
+            setTimeout(() => {
+                this.creditLoading = false;
+            }, 3000);
         }
     }
 });
