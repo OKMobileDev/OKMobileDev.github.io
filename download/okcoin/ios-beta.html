@@ -52,12 +52,6 @@
             <el-button type="primary" class="install-btn" :loading="loading" @click="handleDownload">{{ install }}
             </el-button>
 
-            <el-image class="arrow-icon" src='../v2/icon/icon-ios-arrow-up.png'>
-                <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                </div>
-            </el-image>
-
             <!-- step 2 -->
             <div class="step-2-content" id="step-2-content">
                 <div class="step-subcontent">
@@ -82,7 +76,6 @@
             <div class="setp-2-tips-2">{{ setp_2_tips_2_1 }}<font color="orange">{{ setp_2_tips_2_2 }}</font>
                 {{ setp_2_tips_2_3 }} </div>
             <el-image class="credit-step-1-img" :src="credit_step_1_img" fit="fit"></el-image>
-            <el-image class="credit-step-2-img" :src="credit_step_2_img" fit="fit"></el-image>
         </template>
     </div>
 </body>
