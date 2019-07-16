@@ -49,6 +49,7 @@ new Vue({
                 $(".wx-tip").show();
             } else {
                 window.location.href = this.androidDownloadURL;
+                downloadEvent("okex_android_install_click");
             }
         }
     }

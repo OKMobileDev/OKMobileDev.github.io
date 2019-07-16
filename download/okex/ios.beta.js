@@ -30,6 +30,7 @@ new Vue({
             this.loading = true;
             this.install = '正在安装...';
             window.location.href = this.iosBetaDownloadURL;
+            downloadEvent("okex_ios_install_click");
             scrollTo("#step-2-content");
             setTimeout(() => {
                 this.install = '点击安装内测版';
