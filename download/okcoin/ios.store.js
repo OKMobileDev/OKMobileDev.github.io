@@ -69,6 +69,7 @@ new Vue({
     methods: {
         handleDownload() {
             window.location.href = this.downloadURL;
+            downloadEvent("okcoin_store_ios_install_click");
         },
         rowStyle({ row, rowIndex }) {
             if (rowIndex == 0) {

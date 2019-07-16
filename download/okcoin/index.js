@@ -42,6 +42,7 @@ new Vue({
                 $(".wx-tip").show();
             } else {
                 window.location.href = this.androidDownloadURL;
+                downloadEvent("okcoin_android_install_click");
             }
         }
     }
