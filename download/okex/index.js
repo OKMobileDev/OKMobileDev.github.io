@@ -9,7 +9,7 @@ new Vue({
             betaTitle: '安装内测版',
             storeTitle: 'App Store',
             logo: './images/logo.png',
-            androidDownloadURL: 'http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk',
+            androidDownloadURL: 'https://ok-public-hz.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk',
             tipsData: [{
                 icon: './icon/icon-security.png',
                 title: '更安全',
