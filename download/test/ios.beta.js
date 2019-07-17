@@ -3,7 +3,7 @@ new Vue({
     data: function () {
         return {
             logo: '../test/images/logo-ios-beta.png',
-            logo2: '../test/images/logo-ios-beta-step-2.png',
+            logo2: '../test/images/logo-ios-beta-step-2.gif',
             name: 'OKEx 内测版',
             activeName: 'first',
             loading: false,
