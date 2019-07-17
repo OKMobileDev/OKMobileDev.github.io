@@ -9,7 +9,7 @@ new Vue({
             loading: false,
             creditLoading: false,
             install: '点击安装内测版',
-            step1Title: "内测版特征",
+            step1Title: "内测版特点",
             creditTitle: '去信任 99EX 内测版证书',
             setp_2_tips_1: '安装完成后, 点击下方按钮, 即可授信',
             setp_2_tips_2_1: '下载成功后，请点击',
@@ -21,7 +21,7 @@ new Vue({
             tipsData: [
                 { icon: '../v2/icon/icon-ios-checkmark.png', title: '无须海外 Apple ID，可直接安装' },
                 { icon: '../v2/icon/icon-ios-info.png', title: '更新需要重新下载安装' },
-                { icon: '../v2/icon/icon-ios-info.png', title: '内测版 App 开发证书被禁用等问题' }
+                { icon: '../v2/icon/icon-ios-info.png', title: '内测版 App 存在随时无法使用等问题' }
             ],
         }
     },
