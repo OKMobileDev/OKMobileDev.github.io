@@ -28,24 +28,7 @@ new Vue({
                             formData: {
                                 tips1: '以下美国 ID 供参考使用，请记录好您所使用的账号及密码，以便更新时使用',
                                 tips2: '为防止您的手机信息泄露，请务必不要使用上方 Apple ID 登录 iCloud。使用以上 Apple ID 下载过后，请您及时退出该账号',
-                                tableData: [
-                                    {
-                                        account: '账号',
-                                        password: '密码'
-                                    },
-                                    {
-                                        account: 'OKEX_bj@163.com',
-                                        password: 'Ok123456'
-                                    },
-                                    {
-                                        account: 'OKEX_bj@163.com',
-                                        password: 'Ok123456'
-                                    },
-                                    {
-                                        account: 'OKEX_bj@163.com',
-                                        password: 'Ok123456'
-                                    },
-                                ]
+                                tableData: getAppStoreAccountData(),
                             }
                         }
                     ]
