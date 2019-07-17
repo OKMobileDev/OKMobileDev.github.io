@@ -132,7 +132,7 @@
 
 .install-btn {
     margin-top: calc((100vh - 460px - 44px) * 0.3);
-    width: 280px; 
+    width: calc(100% - 48px);
     height: 44px;
     font-size: 16px; 
     background-color: #3075EE; 
@@ -154,7 +154,7 @@
 
 .credit-btn {
     margin-top: 118px;
-    width: 280px;
+    width: calc(100% - 48px);
     height: 44px;
     font-size: 16px; 
     background-color: white;
