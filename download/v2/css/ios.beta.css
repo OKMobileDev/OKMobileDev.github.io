@@ -140,20 +140,20 @@
 }
 
 .step-2-logo {
-    margin-top: 197px;
-    width: 64px;
-    height: 64px;
+    margin-top: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .setp-2-tips-1 {
-    margin-top: 24px;
+    margin-top: 160px;
     font-size: 16px;
     color: #333;
     font-weight: 800;
 }
 
 .credit-btn {
-    margin-top: 118px;
+    margin-top: 80px;
     width: calc(100% - 48px);
     height: 44px;
     font-size: 16px; 
