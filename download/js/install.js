@@ -143,7 +143,7 @@ function okexChannelDownload(isiOS, channelID) {
         window.location.href = url;
     } else {
         _czc.push(["_trackEvent", "下载", "okex_channel_android_install_click", channelID]);
-        url = "https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+        url = "https://ok-public-hz.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
         window.location.href = url;
     }
     //Google Analytics
@@ -159,7 +159,7 @@ function okexBetaDownload(isiOS, channelID) {
         window.location.href = "itms-services://?action=download-manifest&url=https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/install-manifest.plist";
     } else {
         _czc.push(["_trackEvent", "下载", "okex_android_install_click", channelID]);
-        window.location.href = "https://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
+        window.location.href = "https://ok-public-hz.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKEx-android.apk";
     }
 }
 
