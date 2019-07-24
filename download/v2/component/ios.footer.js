@@ -58,8 +58,10 @@ Vue.component('ios-install-footer', {
             <div style="position: flex; width: 100%;">
                 <div style="display: flex;">
                     <el-button type="primary"
-                        style="width: 80%; height: 40px; margin-left:auto; margin-right: auto; margin-top: 17px; font-size: 14px; background-color: #ffffff; color: #000; border-width: 1px; border-color: #000;"
-                        @click="handleBetaDownload">{{ betatitle }}</el-button>
+                        style="width: 80%; height: 40px; margin-left:auto; margin-right: auto; margin-top: 17px; font-size: 14px; background-color: #333333; border-width: 0px"
+                        @click="handleBetaDownload">
+                        <i class="icon iconfont icon-el-icon-apple"></i>&nbsp&nbsp{{ betatitle }}
+                    </el-button>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ Vue.component('wechat-tips-view', {
         }
     },
     template: `
-    <div class="wx-tip">
+    <div class="wx-tip" onclick="hideWeChat()">
         <el-image class="wx-tip-img" :src="img" fit="contain"></el-image>
     </div>
     `
@@ -25,4 +25,8 @@ function isiOS() {
     let u = navigator.userAgent;
     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     return isiOS
+}
+
+function hideWeChat() {
+    $(".wx-tip").hide();
 }

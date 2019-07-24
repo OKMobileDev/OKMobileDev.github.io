@@ -3,19 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="title" content="CoinAll">
-    <title>CoinAll</title>
     <meta id="description" name="description" content="">
-    <meta property="og:title" content="CoinAll">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="MobileOptimized" content="375">
 </head>
 
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1276378390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276378390' type='text/javascript'%3E%3C/script%3E"));</script>
-
 <body>
-    <script src="../js/index.js"></script>
+    <script type="text/javascript">
+        let u = navigator.userAgent;
+        let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+        let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        if (isiOS) {
+            window.location = 'ios.html'
+        } else {
+            window.location = 'android.html'
+        }
+    </script>
 </body>
 
 </html>

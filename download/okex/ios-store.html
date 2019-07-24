@@ -1,35 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="zh">
-
-<script>
-    //声明_czc对象:
-    var _czc = _czc || [];
-</script>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="title" content="OKEx">
-    <title>OKEx</title>
-    <meta id="description" name="description" content="">
-    <meta property="og:title" content="OKEx">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta name="MobileOptimized" content="375">
-    <link rel="stylesheet" type="text/css" href="../css/download-iOS.css">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/ios.store.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
 </head>
 
-<script
-    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1276378390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276378390' type='text/javascript'%3E%3C/script%3E"));</script>
-<script src="../vendor/jquery-3.3.1.min.js"></script>
+<body class="body">
+    <div id="app" class="content-bg">
+        <template v-if="tableAllData">
+            <!-- header -->
+            <div class="header-content">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <div class="header-text-content">
+                    <div class="header-text-title">{{ headerTitle }}</div>
+                    <div class="header-text-subtitle">{{ headerSubtitle }}</div>
+                </div>
+            </div>
 
-<body class="body">    
-    <!-- tip content -->
-    <div class="wx-tip">
-        <img class="wx-tip-img" src="../images/wxtip.png">
+            <!-- content -->
+            <template v-for="groupData in tableAllData">
+                <div class="card-content">
+                    <div class="card">
+                        <img class="step-1-img" :src="groupData.img" />
+                        <div class="line"></div>
+                        <template v-for="data in groupData.data">
+                            <div class="step-tips-content">
+                                <div class="step-tips-block"></div>
+                                <div class="step-tips-title">{{ data.title }}</div>
+                            </div>
+
+                            <!-- form render -->
+                            <template v-if="data.formData">
+                                <div class="step-tips-subtitle">{{ data.formData.tips1 }}</div>
+
+                                <el-table class="account-table" :data="data.formData.tableData" border
+                                    :row-style="rowStyle" :show-header="false" :cell-style="cellStyle">
+                                    <el-table-column prop="account" label="账号"></el-table-column>
+                                    <el-table-column prop="password" label="密码"></el-table-column>
+                                </el-table>
+
+                                <div class="step-tips-subtitle">{{ data.formData.tips2 }}</div>
+                            </template>
+
+                            <!-- image render -->
+                            <template v-else>
+                                <img class="tips-img" :src="data.img" />
+                            </template>
+
+                        </template>
+                    </div>
+                </div>
+            </template>
+
+            <!-- footer -->
+            <ios-store-install-footer v-on:store-click="handleDownload" :title="footerTitle"></ios-store-install-footer>
+        </template>
     </div>
 </body>
 
-<script type="text/javascript" src="../js/install.js"></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../v2/component/ios.store.footer.js"></script>
+<script src="../v2/js/analysis.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<script src="../v2/js/common.js"></script>
+<script src="./ios.store.js"></script>
 
 </html>
