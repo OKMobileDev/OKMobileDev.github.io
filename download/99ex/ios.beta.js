@@ -21,7 +21,7 @@ new Vue({
             tipsData: [
                 { icon: '../v2/icon/icon-ios-checkmark.png', title: '无须海外 Apple ID，可直接安装' },
                 { icon: '../v2/icon/icon-ios-info.png', title: '更新需要重新下载安装' },
-                { icon: '../v2/icon/icon-ios-info.png', title: '内测版 App 存在随时无法使用等问题' }
+                { icon: '../v2/icon/icon-ios-info.png', title: '苹果政策导致存在偶尔无法使用的情况' }
             ],
         }
     },
