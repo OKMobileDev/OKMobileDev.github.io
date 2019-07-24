@@ -3,7 +3,7 @@ new Vue({
     data: function () {
         return {
             headerName: ' ',
-            headerTitle: '雷爵爾交易所\n交易平台专属为您',
+            headerTitle: '一键直达所有 OK 开放平台交易所',
             headerSubtitle: '',
             androidInstallTitle: '立即安装 OKNodes',
             betaTitle: '立即安装 OKNodes',
