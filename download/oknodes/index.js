@@ -24,7 +24,7 @@ new Vue({
                 title: '全球化客服服务',
             }, {
                 icon: './icon/icon-5.png',
-                title: '共享深度和流动性',
+                title: '共享 OKEx 深度和流动性',
             }]
         }
     },
