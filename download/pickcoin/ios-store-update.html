@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="MobileOptimized" content="375">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../v2/css/ios.store.update.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
+</head>
+
+<body class="body">
+    <div id="app" class="content-bg">
+        <template v-if="tableAllData">
+            <!-- header -->
+            <div class="header-content">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <div class="header-text-content">
+                    <div class="header-text-title">{{ headerTitle }}</div>
+                </div>
+            </div>
+
+            <!-- content -->
+            <template v-for="groupData in tableAllData">
+                <div class="card-content">
+                    <div class="card">
+                        <div class="step-title-content">
+                            <div class="step-title-index">{{ groupData.index }}</div>
+                            <div class="step-title-text">{{ groupData.title }}</div>
+                        </div>
+
+                        <div class="line"></div>
+                        <template v-for="data in groupData.data">
+                            <!-- main step title -->
+                            <template v-if="data.mainTitle">
+                                <div class="step-main-title-content">
+                                    <div class="step-main-title">{{ data.mainTitle }}</div>
+                                    <div class="line"></div>
+                                </div>
+                            </template>
+
+                            <!-- content -->
+                            <div class="step-tips-content" v-if="data.title">
+                                <div class="step-tips-block" v-if="data.title"></div>
+                                <div class="step-tips-title" v-if="data.title">{{ data.title }}<font color="orange">{{ data.password }}</font></div>
+                            </div>
+                            <div class="step-tips" v-if="data.tips1">{{ data.tips1 }}</div>
+                            <img class="tips-img" :src="data.img" v-if="data.img" />
+                            <template v-if="data.tableData">
+                                <el-table class="account-table" :data="data.tableData" border :row-style="rowStyle"
+                                    :show-header="false" :cell-style="cellStyle">
+                                    <el-table-column prop="account" label="账号"></el-table-column>
+                                    <el-table-column prop="password" label="密码"></el-table-column>
+                                </el-table>
+                            </template>
+                            <div class="step-tips" v-if="data.tips2">{{ data.tips2 }}</div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+
+            <!-- footer -->
+            <ios-store-install-footer v-on:store-click="handleDownload" :title="footerTitle"></ios-store-install-footer>
+        </template>
+    </div>
+</body>
+
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../v2/component/ios.store.footer.js"></script>
+<script src="../v2/js/analysis.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<script src="../v2/js/common.js"></script>
+<script src="./ios.store.update.js"></script>
+
+</html>
