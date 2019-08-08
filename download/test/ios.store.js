@@ -26,7 +26,7 @@ new Vue({
                         {
                             title: '输入非中国大陆苹果账号',
                             formData: {
-                                tips1: '以下美国 ID 供参考使用，请记录好您所使用的账号及密码，以便更新时使用',
+                                tips1: '以下香港 ID 供参考使用，请记录好您所使用的账号及密码，以便更新时使用',
                                 tips2: '为防止您的手机信息泄露，请务必不要使用上方 Apple ID 登录 iCloud。使用以上 Apple ID 下载过后，请您及时退出该账号',
                                 tableData: getAppStoreAccountData(),
                             }
@@ -37,7 +37,7 @@ new Vue({
                     img: '../v2/images/ios-store-step-2.png',
                     data: [
                         {
-                            title: '登录成功后，会自动跳转至美国版的App Store点击App Store 下方搜索，然后在页面输入框搜索OKEx',
+                            title: '登录成功后，会自动跳转至香港版的App Store点击App Store 下方搜索，然后在页面输入框搜索OKEx',
                             img: './images/ios-store-tips-2-1.png',
                         },
                         {
