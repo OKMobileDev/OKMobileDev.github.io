@@ -9,7 +9,7 @@ new Vue({
             betaTitle: false,
             storeTitle: '去 App Store 安装',
             logo: './images/header-logo.png',
-            androidDownloadURL: 'http://upgradeapp.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKCoin-android.apk',
+            androidDownloadURL: 'https://ok-public-hz.oss-cn-hangzhou.aliyuncs.com/upgradeapp/OKCoin-android.apk',
             tipsData: [{
                 icon: './icon/icon-1.png',
                 title: '交易手续费不高于0.1 %',
