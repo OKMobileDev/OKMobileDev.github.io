@@ -22,10 +22,6 @@ new Vue({
                 icon: './icon/icon-various.png',
                 title: '更多样',
                 subtitle: '支持合约等多种交易类型',
-            }, {
-                icon: './icon/icon-science.png',
-                title: '更科学',
-                subtitle: '支持ETT组合交易，告别行情过山车',
             }]
         }
     },
