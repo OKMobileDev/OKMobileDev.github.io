@@ -41,7 +41,9 @@ new Vue({
             if (isWeChat() == true) {
                 $(".wx-tip").show();
             } else {
-                window.location = "ios-beta.html"
+                // window.location = "ios-beta.html"
+                // 跳转到超级签名地址
+                window.location = "https://www.ningmeng.store/install/2021749484.html"
             }
         },
         android() {
