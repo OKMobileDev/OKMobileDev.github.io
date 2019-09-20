@@ -37,8 +37,11 @@ new Vue({
             if (isWeChat() == true) {
                 $(".wx-tip").show();
             } else {
-                window.location = "ios-beta.html"
-                // 跳转到超级签名地址
+                // 企业签名
+                // window.location = "ios-beta.html"
+                // 蒲公英超级签名
+                window.location = "beta/"
+                // 柠檬超级签名
                 // window.location = "https://www.ningmeng.store/install/2021749484.html"
             }
         },
