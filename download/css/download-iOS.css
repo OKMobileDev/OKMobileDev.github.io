@@ -1,0 +1,143 @@
+*{
+    margin:0px; 
+    padding:0px;
+}
+
+.body{
+    display:flex;
+    flex-direction: column;
+    background-image: url("../images/top_bg_ios.png");
+    background-repeat:no-repeat;
+    background-position: top;
+    background-size: contain;
+    justify-content:center;
+    align-items: center;
+}
+
+.logo{
+    position: flex;
+    margin-top: 60px;
+    width: 60px;
+    height: 60px;
+}
+
+.name{
+    position: flex;
+    margin-top: 6pt;
+    font-size: 18px;
+    text-align: center;
+    font-weight:bold;
+    color: #fff;
+}
+
+.btn{
+    position: flex;
+    margin-top: 40px;
+    width: 180px;
+    height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3075EE;
+    background-color: #fff;
+    border-radius: 22px;
+    border: 0px;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1), 0 3px 10px 0 rgba(0,0,0,0.1);
+}
+
+.step1{
+    position: flex;
+    margin-top: 43px;
+    width: 24px;
+    height: 24px;
+}
+
+.step1Tip{
+    position: flex;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.step1SubTip{
+    position: flex;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.step1Img{
+    margin-top: 15px;
+    max-width: 320px;
+    max-height: 206px;
+}
+
+.step2{
+    position: flex;
+    margin-top: 43px;
+    width: 24px;
+    height: 24px;
+}
+
+.step2Tip{
+    position: flex;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.step2Img{
+    margin-top: 15px;
+    max-width: 320px;
+    max-height: 320px;
+}
+
+.step3{
+    position: flex;
+    margin-top: 43px;
+    width: 24px;
+    height: 24px;
+}
+
+.step3Tip{
+    position: flex;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.step3Img{
+    margin-top: 15px;
+    max-width: 320px;
+    max-height: 258px;
+    margin-bottom: 40px;
+}
+
+.wx-tip{
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    left:0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: none;
+}
+
+.wx-tip-img{
+    position: fixed;
+    margin-top: 15px;
+    right: 15px;
+    width: 213px;
+    height: 182px;
+}
+
+blue{
+    color: #3075EE;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="MobileOptimized" content="375">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="../vendor/element-ui.css">
+    <link rel="stylesheet" href="../v2/css/ios.beta.css">
+</head>
+
+<body class="body">
+    <div id="app" class="content-bg">
+        <template>
+            <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+            <span class="header-name">{{ name }}</span>
+
+            <!-- step 1 -->
+            <div class="step-content">
+                <div class="step-subcontent">
+                    <div>
+                        <div class="step-text-title-selected">01 Install</div>
+                        <div class="step-text-title-selected-line"></div>
+                    </div>
+                    <div>
+                        <div class="step-text-title-normal">02 Allow to Access</div>
+                    </div>
+                </div>
+                <div class="step-bottom-line"></div>
+            </div>
+
+            <!-- tips -->
+            <div class="step1-title-content">
+                <div class="step1-title">{{ step1Title }}</div>
+            </div>
+
+            <div class="step1-tips-content">
+                <template v-for="tips in tipsData">
+                    <div class="tips-cell">
+                        <el-image class="tips-icon" :src=tips.icon fit="contain">
+                            <div slot="error" class="image-slot">
+                                <i class="el-icon-picture-outline"></i>
+                            </div>
+                        </el-image>
+                        <div class="tips-text-title">{{ tips.title }}</div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- download -->
+            <el-button type="primary" class="install-btn" :loading="loading" @click="handleDownload">{{ install }}
+            </el-button>
+
+            <!-- step 2 -->
+            <div class="step-2-content" id="step-2-content">
+                <div class="step-subcontent">
+                    <div>
+                        <div class="step-text-title-normal">01 Install</div>
+                    </div>
+                    <div>
+                        <div class="step-text-title-selected">02 Allow to Access</div>
+                        <div class="step-text-title-selected-line"></div>
+                    </div>
+                </div>
+                <div class="step-bottom-line"></div>
+            </div>
+
+            <el-image class="step-2-logo" :src="logo2" fit="fit"></el-image>
+            <div class="setp-2-tips-1" style="padding-left: 15px; padding-right: 15px;">{{ setp_2_tips_1 }}</div>
+            <!-- download -->
+            <el-button type="primary" class="install-button" :loading="creditLoading" @click="handleCredit">
+                {{ creditTitle }}
+            </el-button>
+
+            <div class="setp-2-tips-2">{{ setp_2_tips_2_1 }}<font color="orange">{{ setp_2_tips_2_2 }}</font>
+                {{ setp_2_tips_2_3 }} </div>
+            <el-image class="credit-step-1-image" :src="credit_step_1_img" fit="fit"></el-image>
+            <el-image class="credit-step-2-image" :src="credit_step_2_img" fit="fit"></el-image>
+        </template>
+    </div>
+</body>
+
+<style>
+    .credit-step-1-image {
+    margin-top: 31px;
+    width: 255px;
+    height: 146px;
+    margin-bottom: 30px;
+}
+.credit-step-2-image {
+    margin-top: 31px;
+    width: 247px;
+    height: 233px;
+    margin-bottom: 30px;
+}
+.install-button {
+    margin-top: calc((100vh - 460px - 44px) * 0.3);
+    width: calc(100% - 48px);
+    height: 44px;
+    font-size: 16px; 
+    background-color: #3075EE; 
+    border-width: 0px
+}
+</style>
+
+<!-- import Vue before Element -->
+<script src="../vendor/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="../vendor/element-ui.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<script src="../v2/js/analysis.js"></script>
+
+<script src="./ios.beta.js"></script>
+
+</html>

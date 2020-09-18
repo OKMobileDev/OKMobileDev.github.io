@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="MobileOptimized" content="375">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="../vendor/element-ui.css">
+    <link rel="stylesheet" href="../v2/css/homepage.css">
+    <link rel="stylesheet" href="../v2/css/homepage.header.css">
+    <link rel="stylesheet" href="../v2/css/ios.css">
+    <link rel="stylesheet" href="../v2/iconfont/iconfont.css">
+    <!-- cover -->
+    <link rel="stylesheet" href="./css/homepage.header.css">
+</head>
+
+<body class="body">
+    <div id="app" class="content-bg">
+        <template v-if="headerName">
+            <el-row type="flex" class="header-bg">
+                <el-image class="header-logo" :src="logo" fit="fit"></el-image>
+                <span class="header-main-name">{{ headerName }}</span>
+            </el-row>
+            <el-row type="flex" class="main-title-bg" justify="center">
+                <span class="main-title">{{ headerTitle }}</span>
+            </el-row>
+            <el-row type="flex" class="main-subtitle-bg" justify="center">
+                <span class="main-subtitle">{{ headerSubtitle }}</span>
+            </el-row>
+
+            <!-- footer -->
+            <ios-install-footer v-on:ios-appstore-click="ios_appstore" v-on:ios-beta-click="ios_beta" :betatitle="betaTitle" :storetitle="storeTitle">
+            </ios-install-footer>
+
+            <div class="tips-content">
+                <template v-for="tips in tipsData">
+                    <div class="tips-cell">
+                        <el-image class="tips-icon" :src=tips.icon fit="contain">
+                            <div slot="error" class="image-slot">
+                                <i class="el-icon-picture-outline"></i>
+                            </div>
+                        </el-image>
+
+                        <div class="tips-text-content">
+                            <div class="tips-text-title">{{ tips.title }}</div>
+                            <div class="tips-text-subtitle">{{ tips.subtitle }}</div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+        <!-- wechat tips -->
+        <wechat-tips-view></wechat-tips-view>
+    </div>
+</body>
+
+<!-- import Vue before Element -->
+<script src="../vendor/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="../vendor/element-ui.js"></script>
+<script src="../vendor/jquery-3.3.1.min.js"></script>
+<script src="../v2/component/ios.footer.js"></script>
+<script src="../v2/component/wechat.tips.js"></script>
+<script src="../v2/js/analysis.js"></script>
+<script src="./index.js"></script>
+
+</html>
