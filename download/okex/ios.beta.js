@@ -27,7 +27,7 @@ new Vue({
     },
     mounted: function () {
         // 重定向回首页
-        // window.location.href="ios.html"
+        window.location.href="https://okex.win/download"
     },
     methods: {
         handleDownload() {
