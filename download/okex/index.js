@@ -105,7 +105,7 @@ new Vue({
                 var isSafari = /Safari/.test(navigator.userAgent) && !/CriOS/.test(navigator.userAgent) && !/Baidu/.test(navigator.userAgent)
                 if (isSafari) {
                     // 企业签名
-                    window.location = "https://okex.win/download"
+                    window.location = "https://ouyi.cc/download"
                     // window.location = "ios-beta.html"
                     // 蒲公英超级签名
                     // window.location = "beta/"
