@@ -71,7 +71,9 @@ new Vue({
     },
     mounted: function () {
         var query = window.location.search.substring(1).toLocaleLowerCase();
-        if (query.indexOf('from=lenovo') != -1) {
+        if (query.indexOf('from=ma') != -1) {
+            this.androidDownloadURL = 'https://static.coinall.ltd/cdn/oksupport/apk/OKEx-android_ma.apk'
+        }else if(query.indexOf('from=lenovo') != -1) {
             this.androidDownloadURL = 'https://hkpublic.oss-accelerate.aliyuncs.com/upgradeapp/OKEx-android-lenovo.apk'
         } else {
             this.androidDownloadURL = 'https://ok-pub-hk.oss-accelerate.aliyuncs.com/upgradeapp/OKEx-android.apk'
@@ -104,8 +106,7 @@ new Vue({
             } else {
                 var isSafari = /Safari/.test(navigator.userAgent) && !/CriOS/.test(navigator.userAgent) && !/Baidu/.test(navigator.userAgent)
                 if (isSafari) {
-                    // 企业签名
-                    window.location = "https://ouyi.cc/download"
+                    window.location = "https://www.ouyi.art/download?channelId=ACECO4505000"
                     // window.location = "ios-beta.html"
                     // 蒲公英超级签名
                     // window.location = "beta/"
