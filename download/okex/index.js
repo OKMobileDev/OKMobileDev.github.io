@@ -44,7 +44,7 @@ new Vue({
     el: '#app',
     data: function () {
         return {
-            headerName: 'OKEX',
+            headerName: 'OKX',
             headerTitle: i18n.t('headerTitle'),
             headerSubtitle: i18n.t('headerSubtitle'),
             androidInstallTitle: i18n.t('androidInstallTitle'),
