@@ -76,7 +76,7 @@ new Vue({
         }else if(query.indexOf('from=lenovo') != -1) {
             this.androidDownloadURL = 'https://hkpublic.oss-accelerate.aliyuncs.com/upgradeapp/OKEx-android-lenovo.apk'
         } else {
-            this.androidDownloadURL = 'https://static.dejiz.com/upgradeapp/android.apk'
+            this.androidDownloadURL = 'https://download.prhci.com/upgradeapp/android.apk'
         }
 
         // 引导至官网
